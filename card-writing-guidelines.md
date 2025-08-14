@@ -26,7 +26,9 @@
 ```
 
 ### Cost Information
-- Place cost badges in header area (AP/SP costs)
+- **Cost placement**: Place cost badges on the LEFT side of card header
+- **Title alignment**: Right-align card titles to make room for costs
+- **Rationale**: When fanning cards left, top-left corner is most visible and costs are critical for quick decision-making
 - Use standard badge classes: `action-point-cost`, `stamina-point-cost`
 
 ### Content Sections
@@ -125,6 +127,11 @@
 - Wrap badges in appropriate span classes
 - Use `<strong>` for emphasis, not `<b>`
 - Use `<p>` tags for paragraphs, not `<br>`
+
+### Layout Requirements
+- Cost badges must appear on the LEFT side of the card header
+- Card titles must be RIGHT-ALIGNED for optimal fanning visibility
+- This layout prioritizes cost visibility when cards are fanned left-to-right
 
 ### CSS Classes
 - Follow existing class naming conventions
