@@ -238,7 +238,7 @@ body {
 .cost-badges {
     display: flex;
     align-items: center;
-    gap: 1px;
+    gap: 4px;
     flex-shrink: 0;
 }
 
@@ -469,9 +469,10 @@ body {
 }
 
 .cost-separator {
-    color: #000;
-    margin: 0 2px;
-    font-weight: bold;
+    color: #666;
+    margin: 0 1px;
+    font-weight: normal;
+    font-size: 8pt;
 }
 
 /* Helper classes for layout and content organization */
