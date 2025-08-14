@@ -1,0 +1,527 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.ability-score-icon {
+    display: inline-block;
+    margin-right: 2px;
+    font-size: 1.1em;
+    opacity: 1;
+}
+
+/* Unified ability icon styles for screen and print */
+.ability-score-icon {
+    opacity: 1;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    text-shadow: none;
+    filter: contrast(2);
+}
+
+/* Print-specific settings only */
+@media print {
+    @page {
+        size: A4;
+        margin: 0.1in;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+
+    .card {
+        box-shadow: none !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .card:hover {
+        box-shadow: none !important;
+    }
+}
+
+/* Main layout */
+body {
+    margin: 0;
+    padding: 20px;
+    background: #f5f5f5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 6pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+@media screen {
+    body {
+        background: #f5f5f5;
+        padding: 20px;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+}
+
+/* Unified styles for screen and print */
+
+.controls {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.btn.hidden-category {
+    background: #6c757d;
+}
+
+.btn.hidden-category:hover {
+    background: #545b62;
+}
+
+/* Category-specific button colors */
+.btn[data-category="maneuver"] {
+    background: #dc3545;
+}
+
+.btn[data-category="maneuver"]:hover {
+    background: #c82333;
+}
+
+.btn[data-category="passive"] {
+    background: #28a745;
+}
+
+.btn[data-category="passive"]:hover {
+    background: #218838;
+}
+
+.btn[data-category="skill"] {
+    background: #ffc107;
+    color: black;
+}
+
+.btn[data-category="skill"]:hover {
+    background: #e0a800;
+}
+
+.btn[data-category="condition"] {
+    background: #6f42c1;
+}
+
+.btn[data-category="condition"]:hover {
+    background: #5a32a3;
+}
+
+.btn[data-category="reaction"] {
+    background: #fd7e14;
+}
+
+.btn[data-category="reaction"]:hover {
+    background: #e8681a;
+}
+
+.btn[data-category="utility"] {
+    background: #17a2b8;
+}
+
+.btn[data-category="utility"]:hover {
+    background: #138496;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 2.5in);
+    grid-template-rows: repeat(3, 3.5in);
+    gap: 0.05in;
+    justify-content: center;
+    align-content: start;
+    margin: 0 auto;
+    padding: 0.1in;
+    max-width: 8.27in;
+}
+
+@media screen {
+    .card-grid {
+        padding: 0.25in;
+        gap: 0.125in;
+    }
+}
+
+.card {
+    background: white;
+    border-radius: 0.125in;
+    padding: 0.035in;
+    width: 2.5in;
+    height: 3.5in;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    cursor: pointer;
+    font-size: 9pt;
+    line-height: 1.1;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@media screen {
+    .card {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 0.05in;
+    }
+}
+
+.card.tracking {
+    background: #f8f9fa;
+}
+
+.card.tracking .stats-box {
+    background: white;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.card.tracking .card-title {
+    color: #495057;
+}
+
+.card.tracking .card-subtitle {
+    color: #6c757d;
+}
+
+.card-header {
+    margin-bottom: 0.05in;
+    border-bottom: 1px solid #000;
+    padding-bottom: 0.025in;
+}
+
+.title-cost-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2pt;
+}
+
+.cost-badges {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    flex-shrink: 0;
+}
+
+.card-title {
+    font-size: 14pt;
+    font-weight: bold;
+    margin: 0 0 1pt 0;
+    line-height: 1.1;
+    color: #000;
+}
+
+.card-subtitle {
+    font-size: 9pt;
+    color: #000;
+    margin: 0 0 3pt 0;
+    font-style: italic;
+    line-height: 1.1;
+    font-weight: 600;
+}
+
+.card-content {
+    line-height: 1.3;
+}
+
+.card p {
+    margin: 3pt 0 1pt 0;
+    line-height: 1.2;
+    font-size: 8.5pt;
+    color: #000;
+    font-weight: 400;
+}
+
+/* Special paragraph spacing for different content types */
+.card p:first-of-type {
+    margin-top: 4pt;
+}
+
+/* Section headers (Effect:, Success:, etc.) get distinctive styling */
+.card p strong {
+    font-weight: 700;
+    color: #000;
+    display: inline-block;
+    margin-bottom: 2pt;
+}
+
+/* Section break spacing - better semantic separation */
+.card p:has(strong:first-child) {
+    margin-top: 8pt;
+    margin-bottom: 2pt;
+}
+
+/* First paragraph after cost badges gets extra spacing */
+.card-content > div > p:first-child {
+    margin-top: 4pt;
+}
+
+/* Create visual rhythm between content sections */
+.card p + p {
+    margin-top: 4pt;
+}
+
+/* Consistent visual patterns for similar content - removed due to limited CSS support */
+
+/* Common badge styles - consistent visual treatment */
+.badge-base,
+.cost-badge,
+.action-point-cost,
+.stamina-point-cost,
+.passive-feature,
+.skill-check,
+.reaction-trigger,
+.condition-status,
+.action-reference {
+    display: inline-block;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-size: 9pt;
+    font-weight: bold;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    margin: 0 2px 4pt 0;
+    text-shadow: none;
+    letter-spacing: 0.25px;
+}
+
+/* Badge-specific colors and spacing */
+.cost-badge {
+    background: #000;
+    margin: 0;
+}
+
+/* Consistent badge grouping patterns */
+.passive-feature,
+.skill-check,
+.reaction-trigger {
+    margin: 0 2px 6pt 0;
+    display: inline-block;
+}
+
+.passive-feature {
+    background: #27ae60;
+}
+
+.skill-check {
+    background: #8e44ad;
+}
+
+.reaction-trigger {
+    background: #ff60ff;
+}
+
+.condition-status {
+    background: #f39c12;
+    margin: 0 2px 4pt 0;
+    font-size: 8.5pt;
+}
+
+.action-reference {
+    background: #003d7a;
+    margin: 0 2px 4pt 0;
+    font-size: 8.5pt;
+}
+
+/* Card category borders */
+.card-category-border,
+.maneuver-card,
+.passive-card,
+.skill-card,
+.condition-card,
+.reaction-card,
+.utility-card {
+    border: 2px solid;
+}
+
+.maneuver-card {
+    border-color: #dc3545;
+}
+
+.passive-card {
+    border-color: #27ae60;
+}
+
+.skill-card {
+    border-color: #8e44ad;
+}
+
+.condition-card {
+    border-color: #f39c12;
+}
+
+.reaction-card {
+    border-color: #ff60ff;
+}
+
+.utility-card {
+    border-color: #17a2b8;
+}
+
+.card-footer {
+    margin-top: 12px;
+    padding-top: 8px;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+    color: #666;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.individually-hidden {
+    display: none !important;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card.margin-top-group {
+    margin-top: 8px;
+}
+
+.card.margin-bottom-group {
+    margin-bottom: 8px;
+}
+
+.character-stats-box {
+    background: #e9ecef;
+    border: 1pt solid #000;
+    border-radius: 2px;
+    padding: 2pt;
+    margin-bottom: 3pt;
+    font-size: 9pt;
+    line-height: 1.1;
+}
+
+.stat-label {
+    font-weight: bold;
+    color: #000;
+}
+
+.character-stats-box.defense-stats {
+    background: #fff3cd;
+    border-color: #856404;
+}
+
+.character-stats-box.defense-stats .stat-label {
+    color: #000;
+}
+
+.ability-score-value {
+    font-weight: bold;
+    font-size: 11pt;
+    color: #000;
+    min-width: 0.1in;
+    display: inline-block;
+}
+
+.action-point-cost {
+    background: #b21e2f;
+    margin: 0;
+}
+
+.stamina-point-cost {
+    background: #003d7a;
+    margin: 0;
+}
+
+.cost-separator {
+    color: #000;
+    margin: 0 2px;
+    font-weight: bold;
+}
+
+/* Helper classes for layout and content organization */
+.ability-score-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+.skill-list {
+    font-size: 0.75em;
+    color: #000;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.ability-section-header {
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #000;
+    font-size: 1.1em;
+}
+
+.saving-throw-info {
+    color: #000;
+    font-weight: bold;
+}
+
+.resource-tracking-icons {
+    font-size: 20px;
+    line-height: 1;
+    margin: 1px 0;
+}
+
+.resource-tracking-header {
+    font-weight: bold;
+    margin: 3px 0 2px 0;
+    font-size: 1.05em;
+}
+
+.rules-reminder {
+    font-size: 0.7em;
+    margin-top: 4px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.inline-stamina-icon {
+    font-size: 20px;
+    vertical-align: sub;
+    margin-left: 2px;
+}
