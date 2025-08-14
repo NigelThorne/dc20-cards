@@ -58,19 +58,24 @@ export const passiveCards: CharacterCard[] = [
     content: `
       <span class="passive-feature">FEATURE</span>
       <p>
-        <strong>Effect:</strong> When you make an Attack with a
-        Weapon, you can spend
-        <span class="stamina-point-cost">1SP</span> to force the target to
-        make a Physical Save against your Save DC (14).
+        <strong>Trigger:</strong> Hit target with weapon attack
       </p>
       <p>
-        <strong>Failure:</strong> Until the start of your next
-        turn, the target suffers 1 of the following effects of
-        your choice:
-        <span class="condition-status">Deafened</span>,
+        <strong>Effect:</strong> Force target to make a Physical Save (DC 14).
+      </p>
+      <p>
+        <strong>Success:</strong> Target suffers 1 of the following
+        effects of your choice until start of your next turn:
+      </p>
+      <p>
+        • <span class="condition-status">Deafened</span>,
         <span class="condition-status">Exposed</span>,
         <span class="condition-status">Hindered</span>, or
-        <span class="condition-status">Slowed 2</span>.
+        <span class="condition-status">Slowed 2</span>
+      </p>
+      <p>
+        <strong>Failure:</strong> You waste the SP but deal normal
+        attack damage.
       </p>
       <p>
         <em

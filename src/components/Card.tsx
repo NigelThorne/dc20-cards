@@ -27,6 +27,14 @@ const Card: React.FC<CardProps> = ({ card, onToggle, marginClasses = [] }) => {
       );
     }
 
+    if (card.cost.ap && card.cost.sp) {
+      elements.push(
+        <span key="separator" className="cost-separator">
+          /
+        </span>,
+      );
+    }
+
     if (card.cost.sp) {
       elements.push(
         <span key="sp" className="stamina-point-cost">

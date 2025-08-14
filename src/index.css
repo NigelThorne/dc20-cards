@@ -238,7 +238,6 @@ body {
 .cost-badges {
     display: flex;
     align-items: center;
-    gap: 4px;
     flex-shrink: 0;
 }
 
@@ -273,7 +272,7 @@ body {
 
 /* Special paragraph spacing for different content types */
 .card p:first-of-type {
-    margin-top: 4pt;
+    margin-top: 2pt;
 }
 
 /* Section headers (Effect:, Success:, etc.) get distinctive styling */
@@ -335,7 +334,7 @@ body {
 .passive-feature,
 .skill-check,
 .reaction-trigger {
-    margin: 0 2px 6pt 0;
+    margin: 0 2px 3pt 0;
     display: inline-block;
 }
 
@@ -460,12 +459,14 @@ body {
 
 .action-point-cost {
     background: #b21e2f;
-    margin: 0;
+    margin: 2px;
+    padding: 3px;
 }
 
 .stamina-point-cost {
     background: #003d7a;
-    margin: 0;
+    margin: 2px;
+    padding: 3px;
 }
 
 .cost-separator {
