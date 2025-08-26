@@ -1,4 +1,4 @@
-import type { CharacterCard } from '../../types';
+import type { CharacterCard } from "../../types";
 
 export const utilityCards: CharacterCard[] = [
   {
@@ -9,23 +9,25 @@ export const utilityCards: CharacterCard[] = [
     content: `
       <div class="character-stats-box">
         <div>
-          <span class="stat-label">Prime:</span> 3 |
-          <span class="stat-label">Awareness:</span> 5
-        </div>
-        <div>
           <span class="stat-label">Speed:</span> 5 |
           <span class="stat-label">Jump:</span> 1
         </div>
       </div>
       <div class="character-stats-box defense-stats">
-        <div><strong>Defenses</strong></div>
-        <div>
-          <span class="stat-label">Precision:</span> 14 (H: 19,
-          B: 24)
-        </div>
-        <div>
-          <span class="stat-label">Area:</span> 10 (H: 15, B:
-          20)
+        <div style="text-align: center; margin-bottom: 8px;"><strong>Defenses</strong></div>
+        <div style="display: flex; gap: 6px;">
+          <div style="flex: 1; text-align: center;">
+            <div class="ability-section-header" style="margin-bottom: 4px;">Precision</div>
+            <div style="font-size: 1.8em; font-weight: bold; margin: 4px 0;">14</div>
+            <div style="font-size: 0.85em;">H: 19</div>
+            <div style="font-size: 0.85em;">B: 24</div>
+          </div>
+          <div style="flex: 1; text-align: center;">
+            <div class="ability-section-header" style="margin-bottom: 4px;">Area</div>
+            <div style="font-size: 1.8em; font-weight: bold; margin: 4px 0;">10</div>
+            <div style="font-size: 0.85em;">H: 15</div>
+            <div style="font-size: 0.85em;">B: 20</div>
+          </div>
         </div>
       </div>
       <div class="character-stats-box">
@@ -47,31 +49,80 @@ export const utilityCards: CharacterCard[] = [
     category: "utility",
     content: `
       <div class="character-stats-box">
-        <div class="ability-section-header">Physical</div>
-        <div class="ability-score-layout">
-          <span><span class="ability-score-icon">💪</span><span class="stat-label">Might:</span> <span class="ability-score-value">-2</span></span>
-          <span class="saving-throw-info">Save: 0</span>
-        </div>
-        <div class="skill-list">Athletics: -2, Intimidation: -2</div>
-        <div class="ability-score-layout">
-          <span><span class="ability-score-icon">⚡</span><span class="stat-label">Agility:</span> <span class="ability-score-value">+3</span></span>
-          <span class="saving-throw-info">Save: 5</span>
-        </div>
-        <div class="skill-list">Acrobatics: +3, Trickery: +7, Stealth: +5</div>
+        <strong>Prime:</strong> 3 | <strong>Awareness:</strong> 5
       </div>
 
-      <div class="character-stats-box">
-        <div class="ability-section-header">Mental</div>
-        <div class="ability-score-layout">
-          <span><span class="ability-score-icon">⭐</span><span class="stat-label">Charisma:</span> <span class="ability-score-value">+2</span></span>
-          <span class="saving-throw-info">Save: 4</span>
+      <div style="display: flex; gap: 6px;">
+        <div style="flex: 1;">
+          <div class="ability-section-header" style="margin-bottom: 8px; text-align: center;">Physical</div>
+
+          <div class="character-stats-box" style="margin-bottom: 8px; min-height: 100px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding: 4px 0;">
+              <span style="font-size: 1.2em; font-weight: bold;">Might</span>
+              <span style="font-size: 1.2em; font-weight: bold;">-2</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 2px 0; font-size: 0.8em; color: #666;">
+              <span>save</span>
+              <span>0</span>
+            </div>
+            <div style="font-size: 0.9em; margin: 6px 0;">
+              <div>• Athletics: -2</div>
+              <div>• Intimidation: -2</div>
+            </div>
+          </div>
+
+          <div class="character-stats-box" style="min-height: 100px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding: 4px 0;">
+              <span style="font-size: 1.2em; font-weight: bold;">Agility</span>
+              <span style="font-size: 1.2em; font-weight: bold;">+3</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 2px 0; font-size: 0.8em; color: #666;">
+              <span>save</span>
+              <span>5</span>
+            </div>
+            <div style="font-size: 0.9em; margin: 6px 0;">
+              <div>• Acrobatics: +3</div>
+              <div>• Trickery: +7</div>
+              <div>• Stealth: +5</div>
+            </div>
+          </div>
         </div>
-        <div class="skill-list">Animal: +4, Influence: +4, Insight: +2</div>
-        <div class="ability-score-layout">
-          <span><span class="ability-score-icon">💡</span><span class="stat-label">Intelligence:</span> <span class="ability-score-value">+1</span></span>
-          <span class="saving-throw-info">Save: 3</span>
+
+        <div style="flex: 1;">
+          <div class="ability-section-header" style="margin-bottom: 8px; text-align: center;">Mental</div>
+
+          <div class="character-stats-box" style="margin-bottom: 8px; min-height: 100px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding: 4px 0;">
+              <span style="font-size: 1.2em; font-weight: bold;">Charisma</span>
+              <span style="font-size: 1.2em; font-weight: bold;">+2</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 2px 0; font-size: 0.8em; color: #666;">
+              <span>save</span>
+              <span>4</span>
+            </div>
+            <div style="font-size: 0.9em; margin: 6px 0;">
+              <div>• Animal: +4</div>
+              <div>• Influence: +4</div>
+              <div>• Insight: +2</div>
+            </div>
+          </div>
+
+          <div class="character-stats-box" style="min-height: 100px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding: 4px 0;">
+              <span style="font-size: 1.2em; font-weight: bold;">Intelligence</span>
+              <span style="font-size: 1.2em; font-weight: bold;">+1</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 2px 0; font-size: 0.8em; color: #666;">
+              <span>save</span>
+              <span>3</span>
+            </div>
+            <div style="font-size: 0.9em; margin: 6px 0;">
+              <div>• Investigation: +1</div>
+              <div>• Medicine: +1</div>
+              <div>• Survival: +3</div>
+            </div>
+          </div>
         </div>
-        <div class="skill-list">Investigation: +1, Medicine: +1, Survival: +3</div>
       </div>
     `,
   },
