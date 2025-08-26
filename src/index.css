@@ -119,36 +119,36 @@ body {
 }
 
 .btn[data-category="passive"] {
-    background: #28a745;
+    background: #27ae60;
 }
 
 .btn[data-category="passive"]:hover {
-    background: #218838;
+    background: #229954;
 }
 
 .btn[data-category="skill"] {
-    background: #ffc107;
-    color: black;
+    background: #8e44ad;
+    color: white;
 }
 
 .btn[data-category="skill"]:hover {
-    background: #e0a800;
+    background: #7d3c98;
 }
 
 .btn[data-category="condition"] {
-    background: #6f42c1;
+    background: #f39c12;
 }
 
 .btn[data-category="condition"]:hover {
-    background: #5a32a3;
+    background: #e67e22;
 }
 
 .btn[data-category="reaction"] {
-    background: #fd7e14;
+    background: #ff60ff;
 }
 
 .btn[data-category="reaction"]:hover {
-    background: #e8681a;
+    background: #e055e0;
 }
 
 .btn[data-category="utility"] {

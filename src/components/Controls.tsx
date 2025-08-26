@@ -16,8 +16,8 @@ const Controls: React.FC<ControlsProps> = ({
     { key: "utility", label: "Utility" },
     { key: "passive", label: "Passives" },
     { key: "maneuver", label: "Maneuvers" },
-    { key: "reaction", label: "Reactions" },
     { key: "skill", label: "Skills" },
+    { key: "reaction", label: "Reactions" },
     { key: "condition", label: "Conditions" },
   ];
 

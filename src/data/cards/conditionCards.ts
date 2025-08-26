@@ -1,4 +1,4 @@
-import type { CharacterCard } from '../../types';
+import type { CharacterCard } from "../../types";
 
 export const conditionCards: CharacterCard[] = [
   {
@@ -170,6 +170,249 @@ export const conditionCards: CharacterCard[] = [
       <span class="condition-status">CONDITION</span>
       <p>
         <strong>Effect:</strong> You have DisADV X on Attacks.
+      </p>
+    `,
+  },
+  {
+    id: "dazed",
+    title: "Dazed",
+    subtitle: "Condition",
+    category: "condition",
+    content: `
+      <span class="condition-status">CONDITION</span>
+      <p>
+        <strong>Effect:</strong> You have DisADV X on Mental Checks.
+      </p>
+    `,
+  },
+  {
+    id: "disoriented",
+    title: "Disoriented",
+    subtitle: "Condition",
+    category: "condition",
+    content: `
+      <span class="condition-status">CONDITION</span>
+      <p>
+        <strong>Effect:</strong> You have DisADV X on Mental Saves.
+      </p>
+    `,
+  },
+  {
+    id: "doomed",
+    title: "Doomed",
+    subtitle: "Condition",
+    category: "condition",
+    content: `
+      <span class="condition-status">CONDITION</span>
+      <p><strong>Effects:</strong></p>
+      <p>• Your current and maximum HP is reduced by the value of X</p>
+      <p>• When an effect restores your HP, you regain X less HP than normal</p>
+      <p>
+        <strong>Ending Doomed:</strong> All stacks of the Condition end when
+        you complete a Long Rest.
+      </p>
+    `,
+  },
+  {
+    id: "burning",
+    title: "Burning",
+    subtitle: "Condition",
+    category: "condition",
+    content: `
+      <span class="condition-status">CONDITION</span>
+      <p>
+        <strong>Effect:</strong> You take X Fire damage at the start of
+        each of your turns.
+      </p>
+      <p>
+        <strong>Ending Burning:</strong> All stacks of the Condition end when
+        you're doused by at least 1 gallon (4 liters) of water or fully
+        immersed in water. Alternatively, a creature within 1 Space can spend
+        <span class="action-point-cost">1AP</span> to remove 1 stack of the Condition.
+      </p>
+    `,
+  },
+  {
+    id: "charmed",
+    title: "Charmed",
+    subtitle: "Condition",
+    category: "condition",
+    content: `
+      <span class="condition-status">CONDITION</span>
+      <p><strong>Effects:</strong></p>
+      <p>• Your Charmer has ADV on Charisma Checks made against you</p>
+      <p>• You can't target your Charmer with harmful Attacks or effects</p>
+    `,
+  },
+  {
+    id: "blinded",
+    title: "Blinded",
+    subtitle: "Condition",
+    category: "condition",
+    content: `
+      <span class="condition-status">CONDITION</span>
+      <p><strong>Effects:</strong></p>
+      <p>• You can't see (see the Unseen section for more information)</p>
+      <p>• All terrain is considered Difficult Terrain for you unless you're guided by another creature</p>
+    `,
+  },
+  {
+    id: "immobilized",
+    title: "Immobilized",
+    subtitle: "Condition",
+    category: "condition",
+    content: `
+      <span class="condition-status">CONDITION</span>
+      <p>
+        <strong>Effect:</strong> You can't move and you have DisADV on
+        Agility Saves.
+      </p>
+    `,
+  },
+  {
+    id: "impaired",
+    title: "Impaired",
+    subtitle: "Condition",
+    category: "condition",
+    content: `
+      <span class="condition-status">CONDITION</span>
+      <p>
+        <strong>Effect:</strong> You have DisADV X on Physical Checks.
+      </p>
+    `,
+  },
+  {
+    id: "incapacitated",
+    title: "Incapacitated",
+    subtitle: "Condition",
+    category: "condition",
+    content: `
+      <span class="condition-status">CONDITION</span>
+      <p><strong>Effects:</strong></p>
+      <p>• You can't move or speak</p>
+      <p>• You can't spend Actions Points or use Minor Actions</p>
+    `,
+  },
+  {
+    id: "intimidated",
+    title: "Intimidated",
+    subtitle: "Condition",
+    category: "condition",
+    content: `
+      <span class="condition-status">CONDITION</span>
+      <p>
+        <strong>Effect:</strong> You have DisADV on all Checks made
+        against the source.
+      </p>
+    `,
+  },
+  {
+    id: "invisible",
+    title: "Invisible",
+    subtitle: "Condition",
+    category: "condition",
+    content: `
+      <span class="condition-status">CONDITION</span>
+      <p>
+        Creatures can't see you unless they have the ability to see
+        the Invisible (see the Unseen section for more information).
+      </p>
+    `,
+  },
+  {
+    id: "paralyzed",
+    title: "Paralyzed",
+    subtitle: "Condition",
+    category: "condition",
+    content: `
+      <span class="condition-status">CONDITION</span>
+      <p><strong>Effects:</strong></p>
+      <p>• You're Incapacitated</p>
+      <p>• You automatically fail Physical Saves (except against Poisons and Diseases)</p>
+      <p>• Attacks against you have ADV</p>
+      <p>• Attacks made within 1 Space are considered Critical Hits</p>
+    `,
+  },
+  {
+    id: "restrained",
+    title: "Restrained",
+    subtitle: "Condition",
+    category: "condition",
+    content: `
+      <span class="condition-status">CONDITION</span>
+      <p><strong>Effects:</strong></p>
+      <p>• You're Immobilized</p>
+      <p>• Your Attacks have DisADV</p>
+      <p>• Attacks against you have ADV</p>
+    `,
+  },
+  {
+    id: "surprised",
+    title: "Surprised",
+    subtitle: "Condition",
+    category: "condition",
+    content: `
+      <span class="condition-status">CONDITION</span>
+      <p>
+        <strong>Effect:</strong> Your current and maximum AP is reduced by 2.
+      </p>
+    `,
+  },
+  {
+    id: "petrified",
+    title: "Petrified",
+    subtitle: "Condition",
+    category: "condition",
+    content: `
+      <span class="condition-status">CONDITION</span>
+      <p>You and belongings turn to (usually) stone. You count as object and creature.</p>
+      <p><strong>Effects:</strong></p>
+      <p>• Not aware of surroundings</p>
+      <p>• 10x heavier than normal</p>
+      <p>• Incapacitated</p>
+      <p>• Auto-fail Physical Saves</p>
+      <p>• Attacks against you have ADV</p>
+      <p>• Bludgeoning Vulnerability (Double)</p>
+      <p>• Resistance (Half) to all other damage</p>
+      <p>• Existing Curses / Diseases / Poisons / Conditions suspended</p>
+      <p>• Immune to gaining new conditions</p>
+    `,
+  },
+  {
+    id: "terrified",
+    title: "Terrified",
+    subtitle: "Condition",
+    category: "condition",
+    content: `
+      <span class="condition-status">CONDITION</span>
+      <p><strong>Effects:</strong></p>
+      <p>• You must spend your turns trying to move as far away as you can from the source as possible</p>
+      <p>• The only Action you can take is the Move Action to try to run away, or the Dodge Action if you are prevented from moving or there's nowhere farther to move</p>
+    `,
+  },
+  {
+    id: "tethered",
+    title: "Tethered",
+    subtitle: "Condition",
+    category: "condition",
+    content: `
+      <span class="condition-status">CONDITION</span>
+      <p>
+        You are Tethered to a creature or Space. While Tethered,
+        you can't move farther than the specified Spaces from the
+        location of your Tether.
+      </p>
+    `,
+  },
+  {
+    id: "weakened",
+    title: "Weakened",
+    subtitle: "Condition",
+    category: "condition",
+    content: `
+      <span class="condition-status">CONDITION</span>
+      <p>
+        <strong>Effect:</strong> You have DisADV X on Physical Saves.
       </p>
     `,
   },
