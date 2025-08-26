@@ -50,7 +50,7 @@ fi
 
 echo ""
 echo "🚀 Starting development server..."
-echo "   - Application will open at: http://localhost:3000"
+echo "   - Application will open at: http://localhost:3030"
 echo "   - Press Ctrl+C to stop the server"
 echo ""
 echo "🎯 Features available:"
