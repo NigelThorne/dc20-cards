@@ -13,6 +13,10 @@ export const utilityCards: CharacterCard[] = [
           <span class="stat-label">Speed:</span> 5 |
           <span class="stat-label">Jump:</span> 1
         </div>
+        <div>
+          <span class="stat-label">Fly:</span> full speed |
+          <span class="stat-label">Fly up:</span> 1/2 speed
+        </div>
       </div>
       <div style="text-align: center; margin-bottom: 8px;" class="ability-section-header">Defenses</div>
       <div style="display: flex; gap: 6px;">
