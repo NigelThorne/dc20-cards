@@ -89,10 +89,10 @@ const Card: React.FC<CardProps> = ({ card, onToggle, marginClasses = [] }) => {
     >
       <div className="card-header">
         <div className="title-cost-group">
-          <h3 className="card-title">
+          <h3 className={["card-title", ...(card.tags ?? [])].join(" ")}>
             {card.title}
             {card.title === "Runefeather" && (
-              <small style={{ fontSize: "0.6em", fontWeight: "normal" }}>
+              <small style={{ fontSize: "0.4em", fontWeight: "normal" }}>
                 (Nigel)
               </small>
             )}

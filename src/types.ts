@@ -21,6 +21,7 @@ export interface CharacterCard {
   isTracking?: boolean;
   isHidden?: boolean;
   isIndividuallyHidden?: boolean;
+  tags?: string[];
 }
 
 export interface AbilityScore {

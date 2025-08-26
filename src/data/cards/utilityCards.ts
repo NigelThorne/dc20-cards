@@ -6,6 +6,7 @@ export const utilityCards: CharacterCard[] = [
     title: "Runefeather",
     subtitle: "Level 1 Rogue • Beastborn",
     category: "utility",
+    tags: ["cover-card"],
     content: `
       <div class="character-stats-box">
         <div>
@@ -132,6 +133,133 @@ export const utilityCards: CharacterCard[] = [
     `,
   },
   {
+    id: "weapons-attacks",
+    title: "Weapons & Attacks",
+    subtitle: "Combat Stats",
+    category: "utility",
+    content: `
+      <div class="character-stats-box">
+        <div><strong>Long Bow</strong></div>
+        <div>2 handed, Ammo, Unwieldy, Impact, 30/90</div>
+        <div>
+          <span class="stat-label">Damage:</span> 1 Piercing
+        </div>
+        <div style="font-size: 0.85em; font-style: italic;">
+          +1 damage against creatures that are Slowed (any amount)
+        </div>
+      </div>
+      <div class="character-stats-box">
+        <div><strong>Chain Whip</strong></div>
+        <div>Reach (Range: 2), Impact</div>
+        <div>
+          <span class="stat-label">Damage:</span> 1 Slashing
+        </div>
+        <div style="font-size: 0.85em; font-style: italic;">
+          +1 damage with Melee Attacks against creatures farther than 1 Space from you
+        </div>
+      </div>
+      <div class="character-stats-box">
+        <div><strong>Throwing Dagger</strong></div>
+        <div>Concealed, Toss (5/10)</div>
+        <div>
+          <span class="stat-label">Damage:</span> 1 Slashing
+        </div>
+      </div>
+      <div class="character-stats-box">
+        <div>
+          <span class="stat-label">Attack Bonus:</span> +4
+        </div>
+        <div><span class="stat-label">Save DC:</span> 14</div>
+      </div>
+    `,
+  },
+
+  {
+    id: "trades-languages",
+    title: "Trades & Languages",
+    subtitle: "Non-Combat Skills",
+    category: "utility",
+    content: `
+      <div class="ability-section-header" style="text-align: center; margin-bottom: 8px;">Trades</div>
+      <div class="character-stats-box" style="margin-bottom: 12px;">
+        <div>Arcana: +1</div>
+        <div>Carpentry: +5</div>
+        <div>Gaming: +1</div>
+        <div>History: +1</div>
+        <div>Nature: +1</div>
+        <div>Occultism: +1</div>
+        <div>Religion: +1</div>
+        <div>Tinkering: +5</div>
+      </div>
+      <div class="ability-section-header" style="text-align: center; margin-bottom: 8px;">Languages</div>
+      <div class="character-stats-box">
+        <div>
+          <span class="stat-label">Fluent:</span> Bird,
+          Beastman, Orc
+        </div>
+        <div><span class="stat-label">Limited:</span> Dwarf</div>
+      </div>
+    `,
+  },
+  {
+    id: "stamina-points",
+    title: "Stamina Points",
+    subtitle: "Rogue Resource",
+    category: "utility",
+    content: `
+      <div class="character-stats-box">
+        <div><strong>Uses</strong></div>
+        <div>• Spend on Techniques, Class Features</div>
+        <div>• Spend in place of AP for Martial Maneuvers</div>
+        <div>• Debilitating Strike</div>
+      </div>
+      <div class="character-stats-box">
+        <div>
+          <strong
+            >Regain <span class="stamina-point-cost">SP</span></strong
+          >
+        </div>
+        <div>
+          • Spend <span class="action-point-cost">2AP</span> → gain
+          <span class="stamina-point-cost">1SP</span>
+        </div>
+        <div>• Regain all when combat ends</div>
+        <div>
+          <strong
+            >Regain 1/2 Max
+            <span class="stamina-point-cost">SP</span> when:</strong
+          >
+        </div>
+        <div>• Hit a Flanked or Prone target.</div>
+        <div>• Hit a target with any Conditions.</div>
+        <div>• Hit a target you're Hidden from.</div>
+        <div>• Use Cunning action. <span class="action-reference">Disengage</span> <span class="action-reference">Feint</span> <span class="action-reference">Hide</span></div>
+      </div>
+    `,
+  },
+  {
+    id: "tracking-sheet",
+    title: "Tracking Sheet",
+    subtitle: "Use Dry Erase Marker",
+    category: "utility",
+    isTracking: true,
+    content: `
+      <div class="resource-tracking-header">Stamina (1)<span class="inline-stamina-icon">🏃</span></div>
+      <div class="resource-tracking-header">Grit (4)</div>
+      <div class="resource-tracking-icons">💫💫💫💫</div>
+      <div class="resource-tracking-header">Temp HP</div>
+      <div class="resource-tracking-icons">🤍🤍🤍🤍🤍🤍🤍🤍🤍</div>
+      <div class="resource-tracking-header">Health (9)</div>
+      <div class="resource-tracking-icons">❤️❤️❤️❤️❤️❤️❤️❤️❤️</div>
+      <div class="resource-tracking-header">Rest (9)</div>
+      <div class="resource-tracking-icons">😴😴😴😴😴😴😴😴😴</div>
+      <div class="resource-tracking-header">Exhaustion <em>(Death at 6)</em></div>
+      <div class="resource-tracking-icons">💀💀💀💀💀☠️</div>
+      <div class="rules-reminder">Exhaustion: -X to checks, saves, speed, save DC</div>
+    `,
+  },
+
+  {
     id: "basic-combat-actions",
     title: "Basic Combat Actions",
     subtitle: "Attack Options",
@@ -225,131 +353,6 @@ export const utilityCards: CharacterCard[] = [
         <strong>Held Actions:</strong> Delay a specific action
         until something happens before start of next turn
       </p>
-    `,
-  },
-  {
-    id: "weapons-attacks",
-    title: "Weapons & Attacks",
-    subtitle: "Combat Stats",
-    category: "utility",
-    content: `
-      <div class="character-stats-box">
-        <div><strong>Long Bow</strong></div>
-        <div>2 handed, Ammo, Unwieldy, Impact, 30/90</div>
-        <div>
-          <span class="stat-label">Damage:</span> 1 Piercing
-        </div>
-        <div style="font-size: 0.85em; font-style: italic;">
-          +1 damage against creatures that are Slowed (any amount)
-        </div>
-      </div>
-      <div class="character-stats-box">
-        <div><strong>Chain Whip</strong></div>
-        <div>Reach (Range: 2), Impact</div>
-        <div>
-          <span class="stat-label">Damage:</span> 1 Slashing
-        </div>
-        <div style="font-size: 0.85em; font-style: italic;">
-          +1 damage with Melee Attacks against creatures farther than 1 Space from you
-        </div>
-      </div>
-      <div class="character-stats-box">
-        <div><strong>Throwing Dagger</strong></div>
-        <div>Concealed, Toss (5/10)</div>
-        <div>
-          <span class="stat-label">Damage:</span> 1 Slashing
-        </div>
-      </div>
-      <div class="character-stats-box">
-        <div>
-          <span class="stat-label">Attack Bonus:</span> +4
-        </div>
-        <div><span class="stat-label">Save DC:</span> 14</div>
-      </div>
-    `,
-  },
-  {
-    id: "trades-languages",
-    title: "Trades & Languages",
-    subtitle: "Non-Combat Skills",
-    category: "utility",
-    content: `
-      <div class="ability-section-header" style="text-align: center; margin-bottom: 8px;">Trades</div>
-      <div class="character-stats-box" style="margin-bottom: 12px;">
-        <div>Arcana: +1</div>
-        <div>Carpentry: +5</div>
-        <div>Gaming: +1</div>
-        <div>History: +1</div>
-        <div>Nature: +1</div>
-        <div>Occultism: +1</div>
-        <div>Religion: +1</div>
-        <div>Tinkering: +5</div>
-      </div>
-      <div class="ability-section-header" style="text-align: center; margin-bottom: 8px;">Languages</div>
-      <div class="character-stats-box">
-        <div>
-          <span class="stat-label">Fluent:</span> Bird,
-          Beastman, Orc
-        </div>
-        <div><span class="stat-label">Limited:</span> Dwarf</div>
-      </div>
-    `,
-  },
-  {
-    id: "stamina-points",
-    title: "Stamina Points",
-    subtitle: "Rogue Resource",
-    category: "utility",
-    content: `
-      <div class="character-stats-box">
-        <div><strong>Uses</strong></div>
-        <div>• Spend on Techniques, Class Features</div>
-        <div>• Spend in place of AP for Martial Maneuvers</div>
-        <div>• Debilitating Strike</div>
-      </div>
-      <div class="character-stats-box">
-        <div>
-          <strong
-            >Regain <span class="stamina-point-cost">SP</span></strong
-          >
-        </div>
-        <div>
-          • Spend <span class="action-point-cost">2AP</span> → gain
-          <span class="stamina-point-cost">1SP</span>
-        </div>
-        <div>• Regain all when combat ends</div>
-        <div>
-          <strong
-            >Regain 1/2 Max
-            <span class="stamina-point-cost">SP</span> when:</strong
-          >
-        </div>
-        <div>• Hit a Flanked or Prone target.</div>
-        <div>• Hit a target with any Conditions.</div>
-        <div>• Hit a target you're Hidden from.</div>
-        <div>• Use Cunning action. <span class="action-reference">Disengage</span> <span class="action-reference">Feint</span> <span class="action-reference">Hide</span></div>
-      </div>
-    `,
-  },
-  {
-    id: "tracking-sheet",
-    title: "Tracking Sheet",
-    subtitle: "Use Dry Erase Marker",
-    category: "utility",
-    isTracking: true,
-    content: `
-      <div class="resource-tracking-header">Stamina (1)<span class="inline-stamina-icon">🏃</span></div>
-      <div class="resource-tracking-header">Grit (4)</div>
-      <div class="resource-tracking-icons">💫💫💫💫</div>
-      <div class="resource-tracking-header">Temp HP</div>
-      <div class="resource-tracking-icons">🤍🤍🤍🤍🤍🤍🤍🤍🤍</div>
-      <div class="resource-tracking-header">Health (9)</div>
-      <div class="resource-tracking-icons">❤️❤️❤️❤️❤️❤️❤️❤️❤️</div>
-      <div class="resource-tracking-header">Rest (9)</div>
-      <div class="resource-tracking-icons">😴😴😴😴😴😴😴😴😴</div>
-      <div class="resource-tracking-header">Exhaustion <em>(Death at 6)</em></div>
-      <div class="resource-tracking-icons">💀💀💀💀💀☠️</div>
-      <div class="rules-reminder">Exhaustion: -X to checks, saves, speed, save DC</div>
     `,
   },
 ];

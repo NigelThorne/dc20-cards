@@ -251,6 +251,10 @@ body {
     text-align: right;
 }
 
+.cover-card {
+    font-size: 20pt;
+}
+
 .card-subtitle {
     font-size: 9pt;
     color: #000;
