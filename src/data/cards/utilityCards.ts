@@ -13,16 +13,18 @@ export const utilityCards: CharacterCard[] = [
           <span class="stat-label">Jump:</span> 1
         </div>
       </div>
-      <div class="character-stats-box defense-stats">
-        <div style="text-align: center; margin-bottom: 8px;"><strong>Defenses</strong></div>
-        <div style="display: flex; gap: 6px;">
-          <div style="flex: 1; text-align: center;">
+      <div style="text-align: center; margin-bottom: 8px;" class="ability-section-header">Defenses</div>
+      <div style="display: flex; gap: 6px;">
+        <div style="flex: 1;">
+          <div class="character-stats-box defense-stats" style="text-align: center;">
             <div class="ability-section-header" style="margin-bottom: 4px;">Precision</div>
             <div style="font-size: 1.8em; font-weight: bold; margin: 4px 0;">14</div>
             <div style="font-size: 0.85em;">H: 19</div>
             <div style="font-size: 0.85em;">B: 24</div>
           </div>
-          <div style="flex: 1; text-align: center;">
+        </div>
+        <div style="flex: 1;">
+          <div class="character-stats-box defense-stats" style="text-align: center;">
             <div class="ability-section-header" style="margin-bottom: 4px;">Area</div>
             <div style="font-size: 1.8em; font-weight: bold; margin: 4px 0;">10</div>
             <div style="font-size: 0.85em;">H: 15</div>
@@ -39,6 +41,9 @@ export const utilityCards: CharacterCard[] = [
           <span class="stat-label">Initiative:</span> +4 |
           <span class="stat-label">Death Threshold:</span> 4
         </div>
+      </div>
+      <div class="character-stats-box">
+        <div><strong>🍃 Camouflage:</strong> ADV Stealth while motionless</div>
       </div>
     `,
   },
@@ -234,12 +239,18 @@ export const utilityCards: CharacterCard[] = [
         <div>
           <span class="stat-label">Damage:</span> 1 Piercing
         </div>
+        <div style="font-size: 0.85em; font-style: italic;">
+          +1 damage against creatures that are Slowed (any amount)
+        </div>
       </div>
       <div class="character-stats-box">
         <div><strong>Chain Whip</strong></div>
-        <div>Reach, Impact</div>
+        <div>Reach (Range: 2), Impact</div>
         <div>
           <span class="stat-label">Damage:</span> 1 Slashing
+        </div>
+        <div style="font-size: 0.85em; font-style: italic;">
+          +1 damage with Melee Attacks against creatures farther than 1 Space from you
         </div>
       </div>
       <div class="character-stats-box">
@@ -263,16 +274,19 @@ export const utilityCards: CharacterCard[] = [
     subtitle: "Non-Combat Skills",
     category: "utility",
     content: `
-      <div class="character-stats-box">
-        <div><strong>Trades</strong></div>
-        <div>Tinkering: +5</div>
+      <div class="ability-section-header" style="text-align: center; margin-bottom: 8px;">Trades</div>
+      <div class="character-stats-box" style="margin-bottom: 12px;">
+        <div>Arcana: +1</div>
         <div>Carpentry: +5</div>
-        <div>Arcana: +1, History: +1, Nature: +1</div>
-        <div>Occultism: +1, Religion: +1</div>
         <div>Gaming: +1</div>
+        <div>History: +1</div>
+        <div>Nature: +1</div>
+        <div>Occultism: +1</div>
+        <div>Religion: +1</div>
+        <div>Tinkering: +5</div>
       </div>
+      <div class="ability-section-header" style="text-align: center; margin-bottom: 8px;">Languages</div>
       <div class="character-stats-box">
-        <div><strong>Languages</strong></div>
         <div>
           <span class="stat-label">Fluent:</span> Bird,
           Beastman, Orc
@@ -311,9 +325,9 @@ export const utilityCards: CharacterCard[] = [
           >
         </div>
         <div>• Hit a Flanked or Prone target.</div>
-        <div>• Hit a target affected by any Conditions.</div>
+        <div>• Hit a target with any Conditions.</div>
         <div>• Hit a target you're Hidden from.</div>
-        <div>• Use Cunning action.</div>
+        <div>• Use Cunning action. <span class="action-reference">Disengage</span> <span class="action-reference">Feint</span> <span class="action-reference">Hide</span></div>
       </div>
     `,
   },
@@ -324,13 +338,13 @@ export const utilityCards: CharacterCard[] = [
     category: "utility",
     isTracking: true,
     content: `
-      <div class="resource-tracking-header">Health (9)</div>
-      <div class="resource-tracking-icons">❤️❤️❤️❤️❤️❤️❤️❤️❤️</div>
-      <div class="resource-tracking-header">Temp HP</div>
-      <div class="resource-tracking-icons">🤍🤍🤍🤍🤍🤍🤍🤍🤍</div>
       <div class="resource-tracking-header">Stamina (1)<span class="inline-stamina-icon">🏃</span></div>
       <div class="resource-tracking-header">Grit (4)</div>
       <div class="resource-tracking-icons">💫💫💫💫</div>
+      <div class="resource-tracking-header">Temp HP</div>
+      <div class="resource-tracking-icons">🤍🤍🤍🤍🤍🤍🤍🤍🤍</div>
+      <div class="resource-tracking-header">Health (9)</div>
+      <div class="resource-tracking-icons">❤️❤️❤️❤️❤️❤️❤️❤️❤️</div>
       <div class="resource-tracking-header">Rest (9)</div>
       <div class="resource-tracking-icons">😴😴😴😴😴😴😴😴😴</div>
       <div class="resource-tracking-header">Exhaustion <em>(Death at 6)</em></div>
