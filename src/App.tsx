@@ -65,14 +65,9 @@ const App: React.FC = () => {
       const position = (index % 9) + 1; // 1-based position in groups of 9
       const marginClasses: string[] = [];
 
-      // First 3 cards in each group get top margin
-      if (position >= 1 && position <= 3) {
-        marginClasses.push("margin-top-group");
-      }
-
-      // Last 3 cards in each group get bottom margin
-      if (position >= 7 && position <= 9) {
-        marginClasses.push("margin-bottom-group");
+      // Every 9th card gets a page break for printing
+      if (position === 9) {
+        marginClasses.push("page-break-after");
       }
 
       return {

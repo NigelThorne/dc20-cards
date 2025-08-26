@@ -36,7 +36,7 @@ body {
 @media print {
     @page {
         size: A4;
-        margin: 0.1in;
+        margin: 0.6in 0.1in 0.1in 0.1in;
     }
 
     .no-print {
@@ -163,25 +163,34 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 2.5in);
     grid-template-rows: repeat(3, 3.5in);
-    gap: 0.05in;
+    gap: 0.125in;
     justify-content: center;
     align-content: start;
     margin: 0 auto;
-    padding: 0.1in;
-    max-width: 8.27in;
+    padding: 0.125in;
+    max-width: 8.5in;
 }
 
 @media screen {
     .card-grid {
         padding: 0.25in;
         gap: 0.125in;
+        margin: 0 auto;
+    }
+}
+
+@media print {
+    .card-grid {
+        gap: 0.125in;
+        padding: 0.125in;
+        margin: 0 auto;
     }
 }
 
 .card {
     background: white;
     border-radius: 0.125in;
-    padding: 0.035in;
+    padding: 0.06in;
     width: 2.5in;
     height: 3.5in;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -199,7 +208,7 @@ body {
 @media screen {
     .card {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 0.05in;
+        padding: 0.08in;
     }
 }
 
@@ -423,14 +432,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.card.margin-top-group {
-    margin-top: 8px;
-}
-
-.card.margin-bottom-group {
-    margin-bottom: 8px;
-}
-
 .character-stats-box {
     background: #e9ecef;
     border: 1pt solid #000;
@@ -499,7 +500,7 @@ body {
 
 .ability-section-header {
     font-weight: bold;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     color: #000;
     font-size: 1.1em;
 }
@@ -532,4 +533,139 @@ body {
     font-size: 20px;
     vertical-align: sub;
     margin-left: 2px;
+}
+
+/* Ability score colour classes for subtle enhancement */
+.physical-ability-box {
+    background: #f8f9fa;
+    border-color: #6c757d;
+}
+
+.mental-ability-box {
+    background: #f0f8ff;
+    border-color: #495057;
+}
+
+.might-ability-box {
+    background: #fff5f5;
+    border-color: #dc3545;
+}
+
+.agility-ability-box {
+    background: #f0fff4;
+    border-color: #28a745;
+}
+
+.charisma-ability-box {
+    background: #fff8e1;
+    border-color: #ffc107;
+}
+
+.intelligence-ability-box {
+    background: #f3e5f5;
+    border-color: #6f42c1;
+}
+
+.prime-awareness-box {
+    background: #e8f4fd;
+    border-color: #17a2b8;
+    font-weight: bold;
+}
+
+/* Section header colour classes */
+.physical-section-header {
+    color: #495057;
+    background: #f8f9fa;
+    padding: 4px 8px;
+    border-radius: 3px;
+    border: 1px solid #dee2e6;
+}
+
+.mental-section-header {
+    color: #495057;
+    background: #f0f8ff;
+    padding: 4px 8px;
+    border-radius: 3px;
+    border: 1px solid #cce7ff;
+}
+
+/* Weapon and attack colour classes */
+.ranged-weapon-box {
+    background: #f0f8ff;
+    border-color: #17a2b8;
+}
+
+.melee-weapon-box {
+    background: #fff5f5;
+    border-color: #dc3545;
+}
+
+.thrown-weapon-box {
+    background: #f0fff4;
+    border-color: #28a745;
+}
+
+.attack-stats-box {
+    background: #fff8e1;
+    border-color: #ffc107;
+    font-weight: bold;
+}
+
+/* Character summary colour classes */
+.character-movement-box {
+    background: #f0fff4;
+    border-color: #28a745;
+}
+
+.character-defenses-header {
+    color: #495057;
+    background: #fff5f5;
+    padding: 4px 8px;
+    border-radius: 3px;
+    border: 1px solid #ffcdd2;
+}
+
+.precision-defense-box {
+    background: #fff3e0;
+    border-color: #ff9800;
+}
+
+.area-defense-box {
+    background: #e8f5e8;
+    border-color: #4caf50;
+}
+
+.character-combat-stats-box {
+    background: #f3e5f5;
+    border-color: #9c27b0;
+}
+
+.character-traits-box {
+    background: #e8f4fd;
+    border-color: #17a2b8;
+}
+
+/* Page break logic for 9 cards per page */
+.page-break-after {
+    page-break-after: always;
+    break-after: page;
+}
+
+@media print {
+    .page-break-after {
+        page-break-after: always;
+        break-after: page;
+    }
+
+    /* Ensure cards don't break across pages */
+    .card {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    /* Force new page after every 9th card */
+    .card:nth-child(9n) {
+        page-break-after: always;
+        break-after: page;
+    }
 }

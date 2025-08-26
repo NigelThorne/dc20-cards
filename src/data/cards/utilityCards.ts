@@ -8,7 +8,8 @@ export const utilityCards: CharacterCard[] = [
     category: "utility",
     tags: ["cover-card"],
     content: `
-      <div class="character-stats-box">
+      <div style="text-align: center;" class="ability-section-header">Movement</div>
+      <div class="character-stats-box character-movement-box">
         <div>
           <span class="stat-label">Speed:</span> 5 |
           <span class="stat-label">Jump:</span> 1
@@ -18,10 +19,10 @@ export const utilityCards: CharacterCard[] = [
           <span class="stat-label">Fly up:</span> 1/2 speed
         </div>
       </div>
-      <div style="text-align: center; margin-bottom: 8px;" class="ability-section-header">Defenses</div>
+      <div style="text-align: center; margin-top: 8px;" class="ability-section-header">Defenses</div>
       <div style="display: flex; gap: 6px;">
         <div style="flex: 1;">
-          <div class="character-stats-box defense-stats" style="text-align: center;">
+          <div class="character-stats-box defense-stats area-defense-box" style="text-align: center;">
             <div class="ability-section-header" style="margin-bottom: 4px;">Precision</div>
             <div style="font-size: 1.8em; font-weight: bold; margin: 4px 0;">14</div>
             <div style="font-size: 0.85em;">H: 19</div>
@@ -29,7 +30,7 @@ export const utilityCards: CharacterCard[] = [
           </div>
         </div>
         <div style="flex: 1;">
-          <div class="character-stats-box defense-stats" style="text-align: center;">
+          <div class="character-stats-box defense-stats precision-defense-box" style="text-align: center;">
             <div class="ability-section-header" style="margin-bottom: 4px;">Area</div>
             <div style="font-size: 1.8em; font-weight: bold; margin: 4px 0;">10</div>
             <div style="font-size: 0.85em;">H: 15</div>
@@ -37,7 +38,7 @@ export const utilityCards: CharacterCard[] = [
           </div>
         </div>
       </div>
-      <div class="character-stats-box">
+      <div class="character-stats-box character-combat-stats-box" style="margin-top: 6px;">
         <div>
           <span class="stat-label">Attack/Check:</span> +4 |
           <span class="stat-label">Save DC:</span> 14
@@ -47,7 +48,7 @@ export const utilityCards: CharacterCard[] = [
           <span class="stat-label">Death Threshold:</span> 4
         </div>
       </div>
-      <div class="character-stats-box">
+      <div class="character-stats-box character-traits-box" style="margin-top:11px;">
         <div><strong>🍃 Camouflage:</strong> ADV Stealth while motionless</div>
       </div>
     `,
@@ -58,15 +59,13 @@ export const utilityCards: CharacterCard[] = [
     subtitle: "Stats & Skills",
     category: "utility",
     content: `
-      <div class="character-stats-box">
-        <strong>Prime:</strong> 3 | <strong>Awareness:</strong> 5
-      </div>
+
 
       <div style="display: flex; gap: 6px;">
         <div style="flex: 1;">
-          <div class="ability-section-header" style="margin-bottom: 8px; text-align: center;">Physical</div>
+          <div class="ability-section-header" style="text-align: center;">Physical</div>
 
-          <div class="character-stats-box" style="margin-bottom: 8px; min-height: 100px;">
+          <div class="character-stats-box might-ability-box" style="margin-bottom: 8px; min-height: 100px;">
             <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding: 4px 0;">
               <span style="font-size: 1.2em; font-weight: bold;">Might</span>
               <span style="font-size: 1.2em; font-weight: bold;">-2</span>
@@ -81,7 +80,7 @@ export const utilityCards: CharacterCard[] = [
             </div>
           </div>
 
-          <div class="character-stats-box" style="min-height: 100px;">
+          <div class="character-stats-box agility-ability-box" style="min-height: 100px;">
             <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding: 4px 0;">
               <span style="font-size: 1.2em; font-weight: bold;">Agility</span>
               <span style="font-size: 1.2em; font-weight: bold;">+3</span>
@@ -99,9 +98,9 @@ export const utilityCards: CharacterCard[] = [
         </div>
 
         <div style="flex: 1;">
-          <div class="ability-section-header" style="margin-bottom: 8px; text-align: center;">Mental</div>
+          <div class="ability-section-header" style="text-align: center;">Mental</div>
 
-          <div class="character-stats-box" style="margin-bottom: 8px; min-height: 100px;">
+          <div class="character-stats-box charisma-ability-box" style="margin-bottom: 8px; min-height: 100px;">
             <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding: 4px 0;">
               <span style="font-size: 1.2em; font-weight: bold;">Charisma</span>
               <span style="font-size: 1.2em; font-weight: bold;">+2</span>
@@ -117,7 +116,7 @@ export const utilityCards: CharacterCard[] = [
             </div>
           </div>
 
-          <div class="character-stats-box" style="min-height: 100px;">
+          <div class="character-stats-box intelligence-ability-box" style="min-height: 100px;">
             <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding: 4px 0;">
               <span style="font-size: 1.2em; font-weight: bold;">Intelligence</span>
               <span style="font-size: 1.2em; font-weight: bold;">+1</span>
@@ -134,6 +133,10 @@ export const utilityCards: CharacterCard[] = [
           </div>
         </div>
       </div>
+
+      <div class="character-stats-box prime-awareness-box" style="margin-top: 8px">
+        <strong>Prime:</strong> 3 | <strong>Awareness:</strong> 5
+      </div>
     `,
   },
   {
@@ -142,7 +145,7 @@ export const utilityCards: CharacterCard[] = [
     subtitle: "Combat Stats",
     category: "utility",
     content: `
-      <div class="character-stats-box">
+      <div class="character-stats-box ranged-weapon-box">
         <div><strong>Long Bow</strong></div>
         <div>2 handed, Ammo, Unwieldy, Impact, 30/90</div>
         <div>
@@ -152,7 +155,7 @@ export const utilityCards: CharacterCard[] = [
           +1 damage against creatures that are Slowed (any amount)
         </div>
       </div>
-      <div class="character-stats-box">
+      <div class="character-stats-box melee-weapon-box">
         <div><strong>Chain Whip</strong></div>
         <div>Reach (Range: 2), Impact</div>
         <div>
@@ -162,14 +165,14 @@ export const utilityCards: CharacterCard[] = [
           +1 damage with Melee Attacks against creatures farther than 1 Space from you
         </div>
       </div>
-      <div class="character-stats-box">
+      <div class="character-stats-box thrown-weapon-box">
         <div><strong>Throwing Dagger</strong></div>
         <div>Concealed, Toss (5/10)</div>
         <div>
           <span class="stat-label">Damage:</span> 1 Slashing
         </div>
       </div>
-      <div class="character-stats-box">
+      <div class="character-stats-box attack-stats-box">
         <div>
           <span class="stat-label">Attack Bonus:</span> +4
         </div>
