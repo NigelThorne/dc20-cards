@@ -365,16 +365,14 @@ export const conditionCards: CharacterCard[] = [
     category: "condition",
     content: `
       <span class="condition-status">CONDITION</span>
-      <p>You and belongings turn to (usually) stone. You count as object and creature.</p>
+      <p>You turn to stone. Count as object and creature.</p>
       <p><strong>Effects:</strong></p>
-      <p>• Not aware of surroundings</p>
-      <p>• 10x heavier than normal</p>
-      <p>• Incapacitated</p>
-      <p>• Auto-fail Physical Saves</p>
+      <p>• Not aware of surroundings • 10x heavier</p>
+      <p>• Incapacitated • Auto-fail Physical Saves</p>
       <p>• Attacks against you have ADV</p>
       <p>• Bludgeoning Vulnerability (Double)</p>
       <p>• Resistance (Half) to all other damage</p>
-      <p>• Existing Curses / Diseases / Poisons / Conditions suspended</p>
+      <p>• Existing conditions suspended</p>
       <p>• Immune to gaining new conditions</p>
     `,
   },

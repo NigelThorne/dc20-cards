@@ -65,13 +65,6 @@ body {
     print-color-adjust: exact;
 }
 
-@media screen {
-    body {
-        background: #f5f5f5;
-        padding: 20px;
-    }
-}
-
 @media print {
     body {
         background: white;
@@ -152,31 +145,23 @@ body {
 }
 
 .btn[data-category="utility"] {
-    background: #17a2b8;
+    background: #007acc;
 }
 
 .btn[data-category="utility"]:hover {
-    background: #138496;
+    background: #0056a3;
 }
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(3, 2.5in);
-    grid-template-rows: repeat(3, 3.5in);
+    grid-template-columns: repeat(3, 2.484in);
+    grid-template-rows: repeat(3, 3.484in);
     gap: 0.125in;
     justify-content: center;
     align-content: start;
     margin: 0 auto;
     padding: 0.125in;
     max-width: 8.5in;
-}
-
-@media screen {
-    .card-grid {
-        padding: 0.25in;
-        gap: 0.125in;
-        margin: 0 auto;
-    }
 }
 
 @media print {
@@ -191,8 +176,8 @@ body {
     background: white;
     border-radius: 0.125in;
     padding: 0.06in;
-    width: 2.5in;
-    height: 3.5in;
+    width: 2.484in;
+    height: 3.484in;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.2s;
     page-break-inside: avoid;
@@ -203,13 +188,6 @@ body {
     overflow: hidden;
     box-sizing: border-box;
     margin: 0;
-}
-
-@media screen {
-    .card {
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 0.08in;
-    }
 }
 
 .card.tracking {
@@ -385,7 +363,7 @@ body {
 .condition-card,
 .reaction-card,
 .utility-card {
-    border: 2px solid;
+    border: 3px solid;
 }
 
 .maneuver-card {
@@ -409,7 +387,7 @@ body {
 }
 
 .utility-card {
-    border-color: #17a2b8;
+    border-color: #007acc;
 }
 
 .card-footer {
@@ -568,7 +546,7 @@ body {
 
 .prime-awareness-box {
     background: #e8f4fd;
-    border-color: #17a2b8;
+    border-color: #007acc;
     font-weight: bold;
 }
 
@@ -592,7 +570,7 @@ body {
 /* Weapon and attack colour classes */
 .ranged-weapon-box {
     background: #f0f8ff;
-    border-color: #17a2b8;
+    border-color: #007acc;
 }
 
 .melee-weapon-box {
@@ -642,7 +620,7 @@ body {
 
 .character-traits-box {
     background: #e8f4fd;
-    border-color: #17a2b8;
+    border-color: #007acc;
 }
 
 /* Page break logic for 9 cards per page */
