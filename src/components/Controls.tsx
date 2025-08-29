@@ -1,5 +1,6 @@
 import React from "react";
 import type { CardCategory, CategoryState } from "../types";
+import { useAuth } from "../auth/AuthContext";
 
 interface ControlsProps {
   categoryState: CategoryState;
@@ -31,10 +32,46 @@ const Controls: React.FC<ControlsProps> = ({
     return `${baseClass} ${hiddenClass}`.trim();
   };
 
+  const { user, logout } = useAuth();
+
   return (
     <div className="controls no-print">
-      <h1>Nigel's DC20 Character Cards</h1>
-      <p>Click categories to show/hide card types, then print when ready!</p>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          marginBottom: "1rem",
+        }}
+      >
+        <div>
+          <h1>Nigel's DC20 Character Cards</h1>
+          <p>
+            Click categories to show/hide card types, then print when ready!
+          </p>
+        </div>
+        <div style={{ textAlign: "right" }}>
+          <p
+            style={{ margin: "0 0 0.5rem 0", fontSize: "14px", color: "#666" }}
+          >
+            Logged in as: <strong>{user?.globalName || user?.username}</strong>
+          </p>
+          <button
+            type="button"
+            onClick={logout}
+            style={{
+              background: "none",
+              border: "1px solid #ccc",
+              padding: "4px 8px",
+              fontSize: "12px",
+              cursor: "pointer",
+              borderRadius: "4px",
+            }}
+          >
+            Logout
+          </button>
+        </div>
+      </div>
 
       {categories.map(({ key, label }) => (
         <button
