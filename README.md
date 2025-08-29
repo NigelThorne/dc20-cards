@@ -12,6 +12,8 @@ A React application for displaying and managing DC20 character cards designed as
 - **Proxy-Ready**: Perfect for sleeving and using as reference cards during gameplay
 - **Responsive Design**: Scaled up on screen for easy editing, proper size when printing
 
+
+
 ## Getting Started
 
 ### Prerequisites
