@@ -1,4 +1,4 @@
-import type { CharacterCard } from "../../types";
+import type { CharacterCard } from "../../../../types";
 
 export const conditionCards: CharacterCard[] = [
   {
@@ -49,7 +49,7 @@ export const conditionCards: CharacterCard[] = [
       <p><strong>Effects:</strong></p>
       <p>• You're Incapacitated</p>
       <p>• Not aware of surroundings</p>
-      <p>• Auto-fail Physical Saves (except Poisons/Diseases)</p>
+      <p>• Auto-fail <span class="stat-reference">Physical</span> Saves (except Poisons/Diseases)</p>
       <p>• Attacks against you have ADV</p>
       <p>• Attacks within 1 Space are Critical Hits</p>
       <p>
@@ -124,7 +124,7 @@ export const conditionCards: CharacterCard[] = [
       <p><strong>While Stunned 4+:</strong></p>
       <p>• You're Incapacitated</p>
       <p>• Attacks against you have ADV</p>
-      <p>• Auto-fail Physical Saves (except Poisons/Diseases)</p>
+      <p>• Auto-fail <span class="stat-reference">Physical</span> Saves (except Poisons/Diseases)</p>
     `,
   },
   {
@@ -265,7 +265,7 @@ export const conditionCards: CharacterCard[] = [
       <span class="condition-status">CONDITION</span>
       <p>
         <strong>Effect:</strong> You can't move and you have DisADV on
-        Agility Saves.
+        <span class="stat-reference">Agility</span> Saves.
       </p>
     `,
   },
@@ -328,7 +328,7 @@ export const conditionCards: CharacterCard[] = [
       <span class="condition-status">CONDITION</span>
       <p><strong>Effects:</strong></p>
       <p>• You're Incapacitated</p>
-      <p>• You automatically fail Physical Saves (except against Poisons and Diseases)</p>
+      <p>• You automatically fail <span class="stat-reference">Physical</span> Saves (except against Poisons and Diseases)</p>
       <p>• Attacks against you have ADV</p>
       <p>• Attacks made within 1 Space are considered Critical Hits</p>
     `,
@@ -368,7 +368,7 @@ export const conditionCards: CharacterCard[] = [
       <p>You turn to stone. Count as object and creature.</p>
       <p><strong>Effects:</strong></p>
       <p>• Not aware of surroundings • 10x heavier</p>
-      <p>• Incapacitated • Auto-fail Physical Saves</p>
+      <p>• Incapacitated • Auto-fail <span class="stat-reference">Physical</span> Saves</p>
       <p>• Attacks against you have ADV</p>
       <p>• Bludgeoning Vulnerability (Double)</p>
       <p>• Resistance (Half) to all other damage</p>
@@ -410,7 +410,7 @@ export const conditionCards: CharacterCard[] = [
     content: `
       <span class="condition-status">CONDITION</span>
       <p>
-        <strong>Effect:</strong> You have DisADV X on Physical Saves.
+        <strong>Effect:</strong> You have DisADV X on <span class="stat-reference">Physical</span> Saves.
       </p>
     `,
   },

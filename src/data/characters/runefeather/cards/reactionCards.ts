@@ -1,4 +1,4 @@
-import type { CharacterCard } from '../../types';
+import type { CharacterCard } from '../../../../types';
 
 export const reactionCards: CharacterCard[] = [
 
@@ -7,7 +7,7 @@ export const reactionCards: CharacterCard[] = [
     title: "Opportunity Attack",
     subtitle: "Martial Reaction",
     category: "reaction",
-    cost: { ap: 1 },
+    cost: [{ ap: 1 }],
     content: `
       <span class="reaction-trigger">REACTION</span>
       <p>

@@ -1,4 +1,4 @@
-import type { CharacterStats } from '../types';
+import type { CharacterStats } from '../../../types';
 
 export const characterStats: CharacterStats = {
   name: "Runefeather",

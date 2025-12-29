@@ -1,4 +1,4 @@
-import type { CharacterCard } from '../../types';
+import type { CharacterCard } from '../../../../types';
 
 export const weaponCards: CharacterCard[] = [
   {

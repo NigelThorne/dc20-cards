@@ -48,6 +48,8 @@
 4. **Compress sentences**: "The target takes the damage of your Weapon" → "Weapon damage"
 5. **Remove obvious context**: If it's on an action card with 1AP cost, don't say "You can spend 1 AP to..."
 6. **Eliminate transitional phrases**: Get straight to the mechanics
+7. **Use ↻ icon for repeatable**: "(Repeatable)" → "↻" inside the cost badge
+8. **Use ↻ for "Each 5"**: "Success (Each 5):" → "Success ↻5:" or show in table as "+1" under "Every 5>15"
 
 ### Content Sections
 
@@ -193,15 +195,49 @@
 - `action-point-cost`: Red badge (e.g., "1AP", "2AP")
 - `stamina-point-cost`: Blue badge (e.g., "1SP", "3SP")
 - `magic-point-cost`: Purple badge (e.g., "1MP", "2MP")
-- `cost-separator`: "/" between multiple cost types
+- `cost-separator`: 
+  - "/" between AP/SP (indicates choice between them)
+  - "+" between AP/MP or SP/MP (indicates both required)
 
-**CRITICAL**: Cost badges must appear at the FRONT of enhancement/action lines:
+### Repeatable Icon (↻)
+The clockwise open circle arrow **↻** indicates an enhancement or action can be used multiple times.
+
+**Placement Rules:**
+- Place ↻ INSIDE the cost badge, after the cost value with a space: `1AP ↻`
+- For limited repeats, add max in parentheses: `1AP ↻(max 2)`
+- The ↻ is part of the cost badge itself, not separate text
+
+**Usage:**
+```html
+<!-- Unlimited repeatable -->
+<p><span class="action-point-cost">1AP ↻</span> <strong>Damage:</strong> +1</p>
+
+<!-- Limited repeatable -->
+<p><span class="action-point-cost">1AP ↻(max 2)</span> <strong>Range:</strong> +5 Spaces</p>
+
+<!-- With additional modifiers -->
+<p><span class="magic-point-cost">1MP ↻</span> <strong>Duration</strong> (Sustained): 10 min → 1 hr → 8 hr</p>
+```
+
+**What NOT to do:**
+```html
+<!-- WRONG - ↻ outside badge -->
+<p><span class="action-point-cost">1AP</span> ↻ <strong>Damage:</strong> +1</p>
+
+<!-- WRONG - Using word instead of icon -->
+<p><span class="action-point-cost">1AP</span> <strong>Damage</strong> (Repeatable): +1</p>
+
+<!-- WRONG - No space before ↻ -->
+<p><span class="action-point-cost">1AP↻</span> <strong>Damage:</strong> +1</p>
+```
+
+**CRITICAL**: Cost badges (with ↻ if applicable) must appear at the FRONT of enhancement/action lines:
 ```html
 <!-- CORRECT -->
-<p><span class="stamina-point-cost">1SP</span> <strong>Enhancement:</strong> Effect</p>
+<p><span class="stamina-point-cost">1SP ↻</span> <strong>Enhancement:</strong> Effect</p>
 
 <!-- WRONG -->
-<p><strong>Enhancement:</strong> Effect (1 SP)</p>
+<p><strong>Enhancement:</strong> Effect (1 SP, Repeatable)</p>
 ```
 
 ## Technical Requirements

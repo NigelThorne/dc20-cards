@@ -1,4 +1,4 @@
-import type { CharacterCard } from "../../types";
+import type { CharacterCard } from "../../../../types";
 
 export const passiveCards: CharacterCard[] = [
 
@@ -7,14 +7,14 @@ export const passiveCards: CharacterCard[] = [
     title: "Debilitating Strike",
     subtitle: "Rogue Feature",
     category: "passive",
-    cost: { sp: 1 },
+    cost: [{ sp: 1 }],
     content: `
       <span class="passive-feature">FEATURE</span>
       <p>
         <strong>Trigger:</strong> Hit target with weapon attack
       </p>
       <p>
-        <strong>Effect:</strong> Force target to make a Physical Save (DC 14).
+        <strong>Effect:</strong> Force target to make a <span class="stat-reference">Physical</span> Save (DC 14).
       </p>
       <p>
         <strong>Success:</strong> Target suffers 1 of the following

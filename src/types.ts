@@ -8,11 +8,13 @@ export type CardCategory =
   | "maneuver"
   | "spell";
 
-export interface Cost {
+export interface CostItem {
   ap?: number;
   sp?: number;
   mp?: number;
 }
+
+export type Cost = CostItem[];
 
 export interface CharacterCard {
   id: string;

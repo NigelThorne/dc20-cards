@@ -1,4 +1,4 @@
-import type { CharacterCard } from '../../types';
+import type { CharacterCard } from '../../../../types';
 
 export const skillCards: CharacterCard[] = [
   {
@@ -6,7 +6,7 @@ export const skillCards: CharacterCard[] = [
     title: "Analyze Creature",
     subtitle: "Knowledge Check",
     category: "skill",
-    cost: { ap: 1 },
+    cost: [{ ap: 1 }],
     content: `
       <span class="skill-check">SKILL</span>
       <p>
@@ -24,12 +24,12 @@ export const skillCards: CharacterCard[] = [
     title: "Calm Animal",
     subtitle: "Animal Handling",
     category: "skill",
-    cost: { ap: 1 },
+    cost: [{ ap: 1 }],
     content: `
       <span class="skill-check">SKILL</span>
-      <p><strong>Check:</strong> Animal check vs Charisma save</p>
+      <p><strong>Check:</strong> <span class="stat-reference">Animal</span> check vs <span class="stat-reference">Charisma</span> save</p>
       <p>
-        <strong>Success:</strong> Animal is calmed for 1min
+        <strong>Success:</strong> Animal is calmed for 1 min
         (repeated save) or until you harm it
       </p>
       <p><strong>Success +5:</strong> Impaired</p>
@@ -41,7 +41,7 @@ export const skillCards: CharacterCard[] = [
     title: "Combat Insight",
     subtitle: "Trickery/Influence",
     category: "skill",
-    cost: { ap: 1 },
+    cost: [{ ap: 1 }],
     content: `
       <span class="skill-check">SKILL</span>
       <p>
@@ -67,7 +67,7 @@ export const skillCards: CharacterCard[] = [
     title: "Conceal",
     subtitle: "Trickery",
     category: "skill",
-    cost: { ap: 1 },
+    cost: [{ ap: 1 }],
     content: `
       <span class="skill-check">SKILL</span>
       <p><strong>Check:</strong> Trickery vs Passive Awareness</p>
@@ -79,7 +79,7 @@ export const skillCards: CharacterCard[] = [
     title: "Feint",
     subtitle: "Trickery",
     category: "skill",
-    cost: { ap: 1 },
+    cost: [{ ap: 1 }],
     content: `
       <span class="skill-check">SKILL</span>
       <p><strong>Check:</strong> Trickery vs target's Insight</p>
@@ -101,7 +101,7 @@ export const skillCards: CharacterCard[] = [
     title: "Intimidate",
     subtitle: "Intimidation",
     category: "skill",
-    cost: { ap: 1 },
+    cost: [{ ap: 1 }],
     content: `
       <span class="skill-check">SKILL</span>
       <p><strong>Check:</strong> Intimidate vs Charisma</p>
@@ -113,7 +113,7 @@ export const skillCards: CharacterCard[] = [
     title: "Medicine",
     subtitle: "Medicine Check",
     category: "skill",
-    cost: { ap: 1 },
+    cost: [{ ap: 1 }],
     content: `
       <span class="skill-check">SKILL</span>
       <p>
@@ -128,7 +128,7 @@ export const skillCards: CharacterCard[] = [
     title: "Search",
     subtitle: "Awareness",
     category: "skill",
-    cost: { ap: 1 },
+    cost: [{ ap: 1 }],
     content: `
       <span class="skill-check">SKILL</span>
       <p>Locate 1+ Hidden creatures and concealed objects within Line of Sight.</p>
@@ -141,7 +141,7 @@ export const skillCards: CharacterCard[] = [
     title: "Investigate",
     subtitle: "Investigation",
     category: "skill",
-    cost: { ap: 1 },
+    cost: [{ ap: 1 }],
     content: `
       <span class="skill-check">SKILL</span>
       <p>Uncover concealed object, secret compartment, or mechanism function within 1 Space.</p>
@@ -155,7 +155,7 @@ export const skillCards: CharacterCard[] = [
     title: "Extend Jump",
     subtitle: "Acrobatics",
     category: "skill",
-    cost: { ap: 1 },
+    cost: [{ ap: 1 }],
     content: `
       <span class="skill-check">SKILL</span>
       <p><strong>Check:</strong> Acrobatics DC 10</p>
@@ -169,7 +169,7 @@ export const skillCards: CharacterCard[] = [
     title: "Mounted Defense",
     subtitle: "Animal Handling",
     category: "skill",
-    cost: { ap: 1 },
+    cost: [{ ap: 1 }],
     content: `
       <span class="skill-check">SKILL</span>
       <p>Maneuver a mount you're riding to avoid danger.</p>
@@ -184,7 +184,7 @@ export const skillCards: CharacterCard[] = [
     title: "Pass Through",
     subtitle: "Martial",
     category: "skill",
-    cost: { ap: 1 },
+    cost: [{ ap: 1 }],
     content: `
       <span class="skill-check">SKILL</span>
       <p>Move through Space occupied by hostile creature within 1 size of you.</p>

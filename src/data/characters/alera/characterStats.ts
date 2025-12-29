@@ -1,0 +1,59 @@
+import type { CharacterStats } from '../../../types';
+
+export const characterStats: CharacterStats = {
+  name: "Alera",
+  player: "Player Name",
+  level: 1,
+  class: "Mage", // TODO: Update with actual class
+  ancestry: "Dragonborn",
+  prime: 3,
+  awareness: 5,
+  speed: 5,
+  jump: 1,
+  precisionDefense: 12,
+  precisionHeavy: 17,
+  precisionBulky: 22,
+  areaDefense: 14,
+  areaHeavy: 19,
+  areaBulky: 24,
+  attackBonus: 4,
+  saveDC: 14,
+  initiative: 3,
+  deathThreshold: 4,
+  maxHealth: 8,
+  maxStamina: 0,
+  maxGrit: 4,
+  maxRest: 8,
+  physicalAbilities: [
+    {
+      name: "Might",
+      icon: "💪",
+      modifier: 0,
+      save: 2,
+      skills: "Athletics: 0, Intimidation: 0",
+    },
+    {
+      name: "Agility",
+      icon: "⚡",
+      modifier: 1,
+      save: 3,
+      skills: "Acrobatics: +1, Trickery: +1, Stealth: +1",
+    },
+  ],
+  mentalAbilities: [
+    {
+      name: "Charisma",
+      icon: "⭐",
+      modifier: 2,
+      save: 4,
+      skills: "Animal: +2, Influence: +2, Insight: +2",
+    },
+    {
+      name: "Intelligence",
+      icon: "💡",
+      modifier: 3,
+      save: 5,
+      skills: "Investigation: +3, Medicine: +3, Survival: +3",
+    },
+  ],
+};

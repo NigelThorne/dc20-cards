@@ -1,4 +1,4 @@
-import type { CharacterCard } from "../../types";
+import type { CharacterCard } from '../../../../types';
 
 export const utilityCards: CharacterCard[] = [
   {
@@ -54,22 +54,6 @@ export const utilityCards: CharacterCard[] = [
       </div>
     `,
   },
-  {
-    id: "draconic-breath",
-    title: "Draconic Breath",
-    subtitle: "Dragonborn Action",
-    category: "utility",
-    cost: { ap: 2 },
-    content: `
-      <p>Exhale destructive power. Once per Long Rest, regain on Initiative roll.</p>
-      <p><strong>Area:</strong> Spell Attack vs AD in 3 Space Cone or 6 Space Line. Hit: 2 Draconic damage</p>
-      <p><strong>Focused:</strong> Spell Attack vs PD of 1 target within 6 Spaces. Hit: 4 Draconic damage</p>
-      <p><strong>Enhance:</strong> Before Spell Check, spend <span class="stamina-point-cost">SP</span>/<span class="magic-point-cost">MP</span> to increase damage:</p>
-      <p>• Area: +1 damage per <span class="stamina-point-cost">2SP</span> or <span class="magic-point-cost">1MP</span></p>
-      <p>• Focused: +1 damage per <span class="stamina-point-cost">1SP</span> or +2 damage per <span class="magic-point-cost">1MP</span></p>
-    `,
-  },
-
   {
     id: "ability-scores",
     title: "Ability Scores",
@@ -294,11 +278,11 @@ export const utilityCards: CharacterCard[] = [
     subtitle: "Combat Options",
     category: "utility",
     content: `
-      <p>When you make a Martial Attack, spend <span class="action-point-cost">1AP</span> or <span class="stamina-point-cost">1SP</span> to add an enhancement before the Attack Check. Can use same enhancement multiple times unless stated.</p>
+      <p>When you make a Martial Attack you can add enhancements before the Attack Check.</p>
       <hr>
-      <p><span class="action-point-cost">1AP</span>/<span class="stamina-point-cost">1SP</span> <strong>Damage:</strong> Attack deals +1 damage against 1 target</p>
-      <p><span class="action-point-cost">1AP</span>/<span class="stamina-point-cost">1SP</span> <strong>Range:</strong> +1 Space (Melee) or +5 Spaces (Ranged). Once per attack only</p>
-      <p><span class="action-point-cost">1AP</span>/<span class="stamina-point-cost">1SP</span> <strong>Daze:</strong> Target makes Might Save or Dazed until end of their next turn</p>
+      <p><span class="action-point-cost">1AP ↻</span>/<span class="stamina-point-cost">1SP ↻</span> <strong>Damage:</strong> Attack deals +1 damage against 1 target</p>
+      <p><span class="action-point-cost">1AP ↻</span>/<span class="stamina-point-cost">1SP ↻</span> <strong>Range:</strong> +1 Space (Melee) or +5 Spaces (Ranged). Once per attack only</p>
+      <p><span class="action-point-cost">1AP ↻</span>/<span class="stamina-point-cost">1SP ↻</span> <strong>Daze:</strong> Target makes <span class="stat-reference">Might</span> Save or <span class="condition-status">Dazed</span> until end of their next turn</p>
     `,
   },
   {

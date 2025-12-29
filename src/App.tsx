@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import Card from "./components/Card";
 import Controls from "./components/Controls";
 import type { CharacterCard, CardCategory, CategoryState } from "./types";
-import { characterCards } from "./data";
+import { runefeather, alera, type CharacterName } from "./data";
 
 const App: React.FC = () => {
-  const [cards, setCards] = useState<CharacterCard[]>(characterCards);
+  const [selectedCharacter, setSelectedCharacter] = useState<CharacterName>("runefeather");
+  const [cards, setCards] = useState<CharacterCard[]>(runefeather.characterCards);
   const [categoryState, setCategoryState] = useState<CategoryState>({
     utility: true,
     weapon: true,
@@ -57,6 +58,10 @@ const App: React.FC = () => {
     window.print();
   };
 
+  const handleCharacterChange = (character: CharacterName) => {
+    setSelectedCharacter(character);
+  };
+
   const getVisibleCardsWithMargins = () => {
     // Get visible cards - those not hidden by category or individually
     const visibleCards = cards.filter(
@@ -80,11 +85,50 @@ const App: React.FC = () => {
   };
 
   useEffect(() => {
-    // This effect can be used for any side effects when cards or categories change
-  }, []);
+    // Load cards for selected character
+    const characterData = selectedCharacter === "runefeather" ? runefeather : alera;
+    setCards(characterData.characterCards);
+    
+    // Reset all categories to visible when switching characters
+    setCategoryState({
+      utility: true,
+      weapon: true,
+      passive: true,
+      skill: true,
+      condition: true,
+      reaction: true,
+      maneuver: true,
+      spell: true,
+    });
+  }, [selectedCharacter]);
 
   return (
     <div>
+      <div className="character-selector no-print" style={{
+        padding: '10px 20px', 
+        backgroundColor: '#f0f0f0', 
+        borderBottom: '2px solid #ccc',
+        display: 'flex',
+        gap: '10px',
+        alignItems: 'center'
+      }}>
+        <label htmlFor="character-select" style={{ fontWeight: 'bold' }}>Character:</label>
+        <select 
+          id="character-select"
+          value={selectedCharacter}
+          onChange={(e) => handleCharacterChange(e.target.value as CharacterName)}
+          style={{
+            padding: '5px 10px',
+            fontSize: '16px',
+            borderRadius: '4px',
+            border: '1px solid #999'
+          }}
+        >
+          <option value="runefeather">Runefeather</option>
+          <option value="alera">Alera</option>
+        </select>
+      </div>
+
       <Controls
         categoryState={categoryState}
         onToggleCategory={toggleCategory}

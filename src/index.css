@@ -320,6 +320,7 @@ body {
 .skill-check,
 .reaction-trigger,
 .condition-status,
+.stat-reference,
 .action-reference {
     display: inline-block;
     color: white;
@@ -362,6 +363,12 @@ body {
 
 .condition-status {
     background: #f39c12;
+    margin: 0 2px 4pt 0;
+    font-size: 8.5pt;
+}
+
+.stat-reference {
+    background: #007a3d;
     margin: 0 2px 4pt 0;
     font-size: 8.5pt;
 }

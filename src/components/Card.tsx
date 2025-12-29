@@ -14,51 +14,71 @@ const Card: React.FC<CardProps> = ({ card, onToggle, marginClasses = [] }) => {
     onToggle(card);
   };
 
+
   const getCostElement = () => {
     if (!card.cost) return null;
 
-    const elements = [];
-
-    if (card.cost.ap) {
-      elements.push(
-        <span key="ap" className="action-point-cost">
-          {card.cost.ap}AP
-        </span>,
-      );
+    // Cost must be an array of cost items
+    if (!Array.isArray(card.cost)) {
+      return null;
     }
-
-    if (card.cost.ap && (card.cost.sp || card.cost.mp)) {
-      elements.push(
-        <span key="separator-1" className="cost-separator">
-          /
-        </span>,
-      );
-    }
-
-    if (card.cost.sp) {
-      elements.push(
-        <span key="sp" className="stamina-point-cost">
-          {card.cost.sp}SP
-        </span>,
-      );
-    }
-
-    if (card.cost.sp && card.cost.mp) {
-      elements.push(
-        <span key="separator-2" className="cost-separator">
-          /
-        </span>,
-      );
-    }
-
-    if (card.cost.mp) {
-      elements.push(
-        <span key="mp" className="magic-point-cost">
-          {card.cost.mp}MP
-        </span>,
-      );
-    }
-
+  
+    const costArray = card.cost;
+    const elements: JSX.Element[] = [];
+  
+    costArray.forEach((costItem, costIndex) => {
+        const itemElements: JSX.Element[] = [];
+        
+        if (costItem.ap) {
+          itemElements.push(
+            <span key={`${costIndex}-ap`} className="action-point-cost">
+              {costItem.ap}AP
+            </span>,
+          );
+        }
+        
+        if (costItem.sp) {
+          if (itemElements.length > 0) {
+            itemElements.push(
+              <span key={`${costIndex}-sep-sp`} className="cost-separator">
+                {' + '}
+              </span>,
+            );
+          }
+          itemElements.push(
+            <span key={`${costIndex}-sp`} className="stamina-point-cost">
+              {costItem.sp}SP
+            </span>,
+          );
+        }
+        
+        if (costItem.mp) {
+          if (itemElements.length > 0) {
+            itemElements.push(
+              <span key={`${costIndex}-sep-mp`} className="cost-separator">
+                {' + '}
+              </span>,
+            );
+          }
+          itemElements.push(
+            <span key={`${costIndex}-mp`} className="magic-point-cost">
+              {costItem.mp}MP
+            </span>,
+          );
+        }
+        
+      elements.push(...itemElements);
+      
+      // Add separator between cost items (use '/')
+      if (costIndex < costArray.length - 1) {
+        elements.push(
+          <span key={`sep-${costIndex}`} className="cost-separator">
+            {' / '}
+          </span>,
+        );
+      }
+    });
+    
     return elements;
   };
 
