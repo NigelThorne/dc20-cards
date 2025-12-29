@@ -12,7 +12,7 @@ export const utilityCards: CharacterCard[] = [
       <div class="character-stats-box character-movement-box">
         <div>
           <span class="stat-label">Speed:</span> 5 |
-          <span class="stat-label">Jump:</span> 1
+          <span class="stat-label">Jump:</span> 3
         </div>
         <div>
           <span class="stat-label">Fly:</span> full speed |
@@ -49,10 +49,27 @@ export const utilityCards: CharacterCard[] = [
         </div>
       </div>
       <div class="character-stats-box character-traits-box" style="margin-top:11px;">
-        <div><strong>🍃 Camouflage:</strong> ADV Stealth while motionless</div>
+        <div><strong>🌙 Prowler:</strong> ADV on Stealth Checks while in Darkness</div>
+        <div><strong>👁️ Darkvision:</strong> 10 Spaces</div>
       </div>
     `,
   },
+  {
+    id: "draconic-breath",
+    title: "Draconic Breath",
+    subtitle: "Dragonborn Action",
+    category: "utility",
+    cost: { ap: 2 },
+    content: `
+      <p>Exhale destructive power. Once per Long Rest, regain on Initiative roll.</p>
+      <p><strong>Area:</strong> Spell Attack vs AD in 3 Space Cone or 6 Space Line. Hit: 2 Draconic damage</p>
+      <p><strong>Focused:</strong> Spell Attack vs PD of 1 target within 6 Spaces. Hit: 4 Draconic damage</p>
+      <p><strong>Enhance:</strong> Before Spell Check, spend <span class="stamina-point-cost">SP</span>/<span class="magic-point-cost">MP</span> to increase damage:</p>
+      <p>• Area: +1 damage per <span class="stamina-point-cost">2SP</span> or <span class="magic-point-cost">1MP</span></p>
+      <p>• Focused: +1 damage per <span class="stamina-point-cost">1SP</span> or +2 damage per <span class="magic-point-cost">1MP</span></p>
+    `,
+  },
+
   {
     id: "ability-scores",
     title: "Ability Scores",
@@ -140,44 +157,20 @@ export const utilityCards: CharacterCard[] = [
     `,
   },
   {
-    id: "weapons-attacks",
-    title: "Weapons & Attacks",
-    subtitle: "Combat Stats",
+    id: "beastborn-bird",
+    title: "Beastborn: Bird",
+    subtitle: "Racial Features",
     category: "utility",
     content: `
-      <div class="character-stats-box ranged-weapon-box">
-        <div><strong>Long Bow</strong></div>
-        <div>2 handed, Ammo, Unwieldy, Impact, 30/90</div>
-        <div>
-          <span class="stat-label">Damage:</span> 1 Piercing
-        </div>
-        <div style="font-size: 0.85em; font-style: italic;">
-          +1 damage against creatures that are Slowed (any amount)
-        </div>
-      </div>
-      <div class="character-stats-box melee-weapon-box">
-        <div><strong>Chain Whip</strong></div>
-        <div>Reach (Range: 2), Impact</div>
-        <div>
-          <span class="stat-label">Damage:</span> 1 Slashing
-        </div>
-        <div style="font-size: 0.85em; font-style: italic;">
-          +1 damage with Melee Attacks against creatures farther than 1 Space from you
-        </div>
-      </div>
-      <div class="character-stats-box thrown-weapon-box">
-        <div><strong>Throwing Dagger</strong></div>
-        <div>Concealed, Toss (5/10)</div>
-        <div>
-          <span class="stat-label">Damage:</span> 1 Slashing
-        </div>
-      </div>
-      <div class="character-stats-box attack-stats-box">
-        <div>
-          <span class="stat-label">Attack Bonus:</span> +4
-        </div>
-        <div><span class="stat-label">Save DC:</span> 14</div>
-      </div>
+      <p>(1) <strong>Darkvision:</strong> 10 Spaces</p>
+      <p>(1) <strong>Prowler:</strong> ADV Stealth in Darkness</p>
+      <p>(2) <strong>Glide Speed:</strong> Wings glide and slow descent</p>
+      <p>• No Controlled Fall damage</p>
+      <p>• Glide horizontally</p>
+      <p>• <s>End turn midair: Fall 4 Spaces</s></p>
+      <p>(2) <strong>Limited Flight:</strong> (requires Glide Speed)</p>
+      <p>• Ascend: 2 movement → 1 Space up</p>
+      <p>• Hover: Maintain altitude (replaces fall)</p>
     `,
   },
 
@@ -251,15 +244,15 @@ export const utilityCards: CharacterCard[] = [
     category: "utility",
     isTracking: true,
     content: `
-      <div class="resource-tracking-header">Stamina (1)<span class="inline-stamina-icon">🏃</span></div>
+      <div class="resource-tracking-header">Stamina (2)<span class="inline-stamina-icon">🏃</span></div>
       <div class="resource-tracking-header">Grit (4)</div>
       <div class="resource-tracking-icons">💫💫💫💫</div>
       <div class="resource-tracking-header">Temp HP</div>
       <div class="resource-tracking-icons">🤍🤍🤍🤍🤍🤍🤍🤍🤍</div>
-      <div class="resource-tracking-header">Health (9)</div>
-      <div class="resource-tracking-icons">❤️❤️❤️❤️❤️❤️❤️❤️❤️</div>
-      <div class="resource-tracking-header">Rest (9)</div>
-      <div class="resource-tracking-icons">😴😴😴😴😴😴😴😴😴</div>
+      <div class="resource-tracking-header">Health (6)</div>
+      <div class="resource-tracking-icons">❤️❤️❤️❤️❤️❤️</div>
+      <div class="resource-tracking-header">Rest (6)</div>
+      <div class="resource-tracking-icons">😴😴😴😴😴😴</div>
       <div class="resource-tracking-header">Exhaustion <em>(Death at 6)</em></div>
       <div class="resource-tracking-icons">💀💀💀💀💀☠️</div>
       <div class="rules-reminder">Exhaustion: -X to checks, saves, speed, save DC</div>
@@ -273,28 +266,39 @@ export const utilityCards: CharacterCard[] = [
     category: "utility",
     content: `
       <p>
-        <strong>Attack:</strong>
-        <span class="action-point-cost">1AP</span> - Standard attack
+        <span class="action-point-cost">1AP</span> <strong>Attack:</strong> Standard attack
       </p>
       <p>
-        <strong>Disarm:</strong>
-        <span class="action-point-cost">1AP</span> - Attack check vs
+        <span class="action-point-cost">1AP</span> <strong>Disarm:</strong> Attack check vs
         martial/trickery, object falls to ground
       </p>
       <p>
-        <strong>Grapple:</strong>
-        <span class="action-point-cost">1AP</span> - Athletic vs martial
+        <span class="action-point-cost">1AP</span> <strong>Grapple:</strong> Athletic vs martial
       </p>
       <p>
-        <strong>Shove:</strong>
-        <span class="action-point-cost">1AP</span> - Athletic vs martial,
+        <span class="action-point-cost">1AP</span> <strong>Shove:</strong> Athletic vs martial,
         can knock prone, push target around/knock prone
       </p>
       <p>
-        <strong>Tackle:</strong>
-        <span class="action-point-cost">1AP</span> - Move 2+ squares, then
+        <span class="action-point-cost">1AP</span> <strong>Tackle:</strong> Move 2+ squares, then
         athletic vs martial. Success: grapple and push
       </p>
+      <p>
+        <span class="action-point-cost">1AP</span> <strong>Taunt:</strong> Influence vs Charisma. Target has DisADV when targeting anyone but you
+      </p>
+    `,
+  },
+  {
+    id: "martial-enhancements",
+    title: "Martial Enhancements",
+    subtitle: "Combat Options",
+    category: "utility",
+    content: `
+      <p>When you make a Martial Attack, spend <span class="action-point-cost">1AP</span> or <span class="stamina-point-cost">1SP</span> to add an enhancement before the Attack Check. Can use same enhancement multiple times unless stated.</p>
+      <hr>
+      <p><span class="action-point-cost">1AP</span>/<span class="stamina-point-cost">1SP</span> <strong>Damage:</strong> Attack deals +1 damage against 1 target</p>
+      <p><span class="action-point-cost">1AP</span>/<span class="stamina-point-cost">1SP</span> <strong>Range:</strong> +1 Space (Melee) or +5 Spaces (Ranged). Once per attack only</p>
+      <p><span class="action-point-cost">1AP</span>/<span class="stamina-point-cost">1SP</span> <strong>Daze:</strong> Target makes Might Save or Dazed until end of their next turn</p>
     `,
   },
   {
@@ -304,29 +308,24 @@ export const utilityCards: CharacterCard[] = [
     category: "utility",
     content: `
       <p>
-        <strong>Disengage:</strong>
-        <span class="action-point-cost">1AP</span> - DisADV on opp.
+        <span class="action-point-cost">1AP</span> <strong>Disengage:</strong> DisADV on opp.
         attacks until next turn
         <em>(+3 move +<span class="stamina-point-cost">SP</span>)</em>
       </p>
       <p>
-        <strong>Full Disengage:</strong>
-        <span class="action-point-cost">2AP</span> - Immune to opp.
+        <span class="action-point-cost">2AP</span> <strong>Full Disengage:</strong> Immune to opp.
         attacks until next turn
       </p>
       <p>
-        <strong>Dodge:</strong>
-        <span class="action-point-cost">1AP</span> - DisADV on next
+        <span class="action-point-cost">1AP</span> <strong>Dodge:</strong> DisADV on next
         attack/grapple until next turn
       </p>
       <p>
-        <strong>Full Dodge:</strong>
-        <span class="action-point-cost">2AP</span> - DisADV on all
+        <span class="action-point-cost">2AP</span> <strong>Full Dodge:</strong> DisADV on all
         attacks/grapples until next turn
       </p>
       <p>
-        <strong>Hide:</strong>
-        <span class="action-point-cost">1AP</span> - Stealth vs awareness
+        <span class="action-point-cost">1AP</span> <strong>Hide:</strong> Stealth vs awareness
         to hide from 1+ creatures
         <em>(+3 move +<span class="stamina-point-cost">SP</span>)</em>
       </p>
@@ -339,22 +338,19 @@ export const utilityCards: CharacterCard[] = [
     category: "utility",
     content: `
       <p>
-        <strong>Move:</strong> <span class="action-point-cost">1AP</span>
+        <span class="action-point-cost">1AP</span> <strong>Move:</strong>
       </p>
       <p>
-        <strong>Help:</strong>
-        <span class="action-point-cost">1AP</span> - Grant creature help
+        <span class="action-point-cost">1AP</span> <strong>Help:</strong> Grant creature help
         die until your next turn. Must declare type of check and
         meet conditions.
         <em>First help: d8, second: d6, third: d4</em>
       </p>
       <p>
-        <strong>Interact with Object:</strong>
-        <span class="action-point-cost">1AP</span>
+        <span class="action-point-cost">1AP</span> <strong>Interact with Object:</strong>
       </p>
       <p>
-        <strong>Spell:</strong>
-        <span class="action-point-cost">1AP</span> or more
+        <span class="action-point-cost">1AP</span> <strong>Spell:</strong> or more
       </p>
       <p>
         <strong>Held Actions:</strong> Delay a specific action

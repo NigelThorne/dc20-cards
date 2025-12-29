@@ -27,9 +27,9 @@ const Card: React.FC<CardProps> = ({ card, onToggle, marginClasses = [] }) => {
       );
     }
 
-    if (card.cost.ap && card.cost.sp) {
+    if (card.cost.ap && (card.cost.sp || card.cost.mp)) {
       elements.push(
-        <span key="separator" className="cost-separator">
+        <span key="separator-1" className="cost-separator">
           /
         </span>,
       );
@@ -39,6 +39,22 @@ const Card: React.FC<CardProps> = ({ card, onToggle, marginClasses = [] }) => {
       elements.push(
         <span key="sp" className="stamina-point-cost">
           {card.cost.sp}SP
+        </span>,
+      );
+    }
+
+    if (card.cost.sp && card.cost.mp) {
+      elements.push(
+        <span key="separator-2" className="cost-separator">
+          /
+        </span>,
+      );
+    }
+
+    if (card.cost.mp) {
+      elements.push(
+        <span key="mp" className="magic-point-cost">
+          {card.cost.mp}MP
         </span>,
       );
     }
@@ -57,6 +73,8 @@ const Card: React.FC<CardProps> = ({ card, onToggle, marginClasses = [] }) => {
       condition: "condition-card",
       reaction: "reaction-card",
       utility: "utility-card",
+      weapon: "weapon-card",
+      spell: "spell-card",
     };
 
     classes.push(categoryClasses[card.category]);

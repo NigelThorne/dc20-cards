@@ -1,54 +1,7 @@
 import type { CharacterCard } from "../../types";
 
 export const passiveCards: CharacterCard[] = [
-  {
-    id: "weapon-masteries",
-    title: "Weapon Masteries",
-    subtitle: "Passive",
-    category: "passive",
-    content: `
-      <span class="passive-feature">PASSIVE</span>
-      <p>
-        <strong>Bow:</strong> +1 damage against creatures that
-        are Slowed (any amount).
-      </p>
-      <p>
-        <strong>Whip:</strong> +1 damage with Melee Attacks
-        against creatures farther than 1 Space from you.
-      </p>
-      <p>
-        <strong>Sword:</strong> +1 damage against creatures that
-        are Exposed.
-      </p>
-    `,
-  },
-  {
-    id: "wings",
-    title: "Wings",
-    subtitle: "Beastborn Feature",
-    category: "passive",
-    content: `
-      <span class="passive-feature">PASSIVE</span>
-      <p><strong>While not Incapacitated:</strong></p>
-      <p><span class="ability-score-icon">🪶</span> No fall damage</p>
-      <p>
-        <span class="ability-score-icon">🪁</span> Glide horizontally
-        at full speed
-      </p>
-      <p>
-        <span class="ability-score-icon">⬆️</span> Ascend: 2 Spaces →
-        1 Space up
-      </p>
-      <p>
-        <span class="ability-score-icon">🚁</span> Hover between turns
-        if in air
-      </p>
-      <p>
-        <span class="ability-score-icon">🦎</span> Camouflage: ADV
-        Stealth while motionless
-      </p>
-    `,
-  },
+
   {
     id: "debilitating-strike",
     title: "Debilitating Strike",
@@ -86,6 +39,19 @@ export const passiveCards: CharacterCard[] = [
     `,
   },
   {
+    id: "cheap-shot",
+    title: "Cheap Shot",
+    subtitle: "Rogue Feature",
+    category: "passive",
+    content: `
+      <span class="passive-feature">FEATURE</span>
+      <p>You deal +1 damage on Martial Attacks against a creature that fulfills at least one of the following:</p>
+      <p>• It's Flanked or Prone</p>
+      <p>• It has any Condition other than Invisible</p>
+      <p>• You're Hidden from it</p>
+    `,
+  },
+  {
     id: "roguish-finesse",
     title: "Roguish Finesse",
     subtitle: "Rogue Feature",
@@ -104,7 +70,7 @@ export const passiveCards: CharacterCard[] = [
       <p>
         <strong>Skill Expertise:</strong> Your Skill Mastery
         Limit increases by 1, up to Grandmaster (+10). A Skill
-        can only reach Expert (+5) up to its Mastery limit.
+        can only benefit from one increase to its Mastery limit.
       </p>
       <p>
         <strong>Multi-Skilled:</strong> You gain 1 Skill Point.
@@ -114,16 +80,15 @@ export const passiveCards: CharacterCard[] = [
   {
     id: "cypher-speech",
     title: "Cypher Speech",
-    subtitle: "Rogue Feature",
+    subtitle: "Flavor Feature",
     category: "passive",
     content: `
       <span class="passive-feature">FEATURE</span>
-      <p><strong>Abilities:</strong></p>
-      <p>• Speak in code with slum dwellers</p>
-      <p>• Hide messages in normal conversation</p>
-      <p>• Leave coded written messages ("Safety", "Threat", "Wealth")</p>
-      <p>• Mark secret locations (caches, passages, safehouses, dangers)</p>
-      <p>• Gain fluency in one additional Mortal Language</p>
+      <p>You become Fluent in a Mortal Language of your choice.</p>
+      <p>You understand how to speak in code with a specific demographic of your choice (such as upper society, lower society, a faction, etc.). Your coded messages can be concealed in normal conversation and written communications.</p>
+      <p><strong>Coded Messages:</strong></p>
+      <p>• Leave simple messages: "Safety", "Threat", or "Wealth"</p>
+      <p>• Mark locations: cache, secret passageway, safehouse, or area of danger</p>
     `,
   },
 ];

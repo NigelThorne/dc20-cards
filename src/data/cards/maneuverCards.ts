@@ -2,103 +2,34 @@ import type { CharacterCard } from '../../types';
 
 export const maneuverCards: CharacterCard[] = [
   {
-    id: "extend-attack",
-    title: "Extend Attack",
+    id: "volley",
+    title: "Volley",
     subtitle: "Maneuver",
     category: "maneuver",
-    cost: { ap: 1, sp: 1 },
+    cost: { ap: 2 },
     content: `
-      <p>
-        <strong>Effect:</strong> Your Melee Attack Range is
-        increased by 1 Space (or your Ranged Attack Range is
-        increased by 5 Spaces) for the Attack.
-      </p>
+      <p><strong>Range:</strong> Ranged Weapon</p>
+      <p><strong>Effect:</strong> Area Martial Attack vs AD of all targets in 2 Space Diameter Sphere (origin within Range).</p>
+      <p><strong>Hit:</strong> Weapon damage</p>
+      <p><span class="stamina-point-cost">2SP</span> <strong>Damage</strong> (Repeatable): Damage +1</p>
+      <p><span class="stamina-point-cost">2SP</span> <strong>Area</strong> (Repeatable): Sphere diameter +1 Space</p>
+      <p><span class="stamina-point-cost">1SP</span> <strong>Rain of Fire:</strong> Targets don't gain 1/2 Cover benefits</p>
+      <p><span class="stamina-point-cost">2SP</span> <strong>Suppressive Fire:</strong> Charisma Save or Hindered until end of their next turn</p>
     `,
   },
   {
-    id: "power-attack",
-    title: "Power Attack",
+    id: "heroic-extend-jump",
+    title: "Heroic Extend Jump",
     subtitle: "Maneuver",
     category: "maneuver",
     cost: { ap: 1, sp: 1 },
     content: `
-      <p>
-        <strong>Effect:</strong> You deal +1 damage with the
-        Attack. You can use this Maneuver multiple times.
-      </p>
-    `,
-  },
-  {
-    id: "sweep-attack",
-    title: "Sweep Attack",
-    subtitle: "Maneuver",
-    category: "maneuver",
-    cost: { ap: 1, sp: 1 },
-    content: `
-      <p>
-        <strong>Effect:</strong> Choose 1 additional target
-        within 1 Space of the original target that's within your
-        Attack Range. Make 1 Attack Check against all targets.
-      </p>
-      <p>
-        <strong>Hit:</strong> Original target takes your
-        Attack's damage, each additional target takes 1 damage
-        of the same type. Can use multiple times.
-      </p>
-    `,
-  },
-  {
-    id: "hamstring",
-    title: "Hamstring",
-    subtitle: "Maneuver",
-    category: "maneuver",
-    cost: { ap: 1, sp: 1 },
-    content: `
-      <p>
-        <strong>Effect:</strong> The target becomes Slowed 1
-        (every 1 Space you move costs an extra 1 Space of
-        movement) until the end of your next turn.
-      </p>
-      <p><em>Physical save against DC.</em></p>
-    `,
-  },
-  {
-    id: "knockback",
-    title: "Knockback",
-    subtitle: "Maneuver",
-    category: "maneuver",
-    cost: { ap: 1, sp: 1 },
-    content: `
-      <p>
-        <strong>Effect:</strong> The target is pushed 1 Space
-        away + up to 1 additional Space for every 5 it fails its
-        Save by.
-      </p>
-    `,
-  },
-  {
-    id: "taunt",
-    title: "Taunt",
-    subtitle: "Maneuver",
-    category: "maneuver",
-    cost: { ap: 1, sp: 1 },
-    content: `
-      <p>
-        <strong>Effect:</strong> Choose an enemy creature that
-        can see or hear you within 5 Spaces. Make an Attack
-        Check, Influence Check, or Intimidation Check (your
-        choice) contested by the target's Mental Save.
-      </p>
-      <p>
-        <strong>Success:</strong> Target is Taunted (DisADV on
-        Attacks against creatures other than you) until your
-        next Attack.
-      </p>
-      <p>
-        <strong>Full Taunt:</strong> Spend additional
-        <span class="action-point-cost">1AP</span> to have the Taunted
-        Condition last until the end of your next turn.
-      </p>
+      <p><strong>Base Action:</strong> Acrobatics Check (DC 10)</p>
+      <p>• Success: Jump Distance +2 (+1 per 5 over DC)</p>
+      <p>• Failure: Jump Distance +1</p>
+      <p><span class="stamina-point-cost">1SP</span> <strong>Instant Jump:</strong> Standing Jump not halved</p>
+      <p><span class="stamina-point-cost">1SP</span> <strong>Increased Jump</strong> (Repeatable): Jump Distance +2</p>
+      <p><span class="stamina-point-cost">1SP</span> <strong>Heroic Landing</strong> (Repeatable): Reduce fall damage by 2</p>
     `,
   },
 ];

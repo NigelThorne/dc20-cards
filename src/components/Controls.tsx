@@ -15,9 +15,11 @@ const Controls: React.FC<ControlsProps> = ({
 }) => {
   const categories: Array<{ key: CardCategory; label: string }> = [
     { key: "utility", label: "Utility" },
+    { key: "weapon", label: "Weapons" },
     { key: "passive", label: "Passives" },
     { key: "maneuver", label: "Maneuvers" },
     { key: "skill", label: "Skills" },
+    { key: "spell", label: "Spells" },
     { key: "reaction", label: "Reactions" },
     { key: "condition", label: "Conditions" },
   ];

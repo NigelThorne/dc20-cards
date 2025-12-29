@@ -4,11 +4,14 @@ export type CardCategory =
   | "skill"
   | "condition"
   | "reaction"
-  | "maneuver";
+  | "weapon"
+  | "maneuver"
+  | "spell";
 
 export interface Cost {
   ap?: number;
   sp?: number;
+  mp?: number;
 }
 
 export interface CharacterCard {

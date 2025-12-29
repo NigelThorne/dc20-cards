@@ -29,7 +29,7 @@ export const skillCards: CharacterCard[] = [
       <span class="skill-check">SKILL</span>
       <p><strong>Check:</strong> Animal check vs Charisma save</p>
       <p>
-        <strong>Success:</strong> Animal is taunted for 1min
+        <strong>Success:</strong> Animal is calmed for 1min
         (repeated save) or until you harm it
       </p>
       <p><strong>Success +5:</strong> Impaired</p>
@@ -126,15 +126,71 @@ export const skillCards: CharacterCard[] = [
   {
     id: "search",
     title: "Search",
+    subtitle: "Awareness",
+    category: "skill",
+    cost: { ap: 1 },
+    content: `
+      <span class="skill-check">SKILL</span>
+      <p>Locate 1+ Hidden creatures and concealed objects within Line of Sight.</p>
+      <p><strong>Hidden Creatures:</strong> Awareness vs Stealth. Success: Know location until end of turn</p>
+      <p><strong>Hidden Objects:</strong> Awareness vs discovery DC. Success: Discover location</p>
+    `,
+  },
+  {
+    id: "investigate",
+    title: "Investigate",
     subtitle: "Investigation",
     category: "skill",
     cost: { ap: 1 },
     content: `
       <span class="skill-check">SKILL</span>
-      <p>
-        <strong>Effect:</strong> Locate 1+ hidden
-        creature/object
-      </p>
+      <p>Uncover concealed object, secret compartment, or mechanism function within 1 Space.</p>
+      <p><strong>Concealed Objects:</strong> Investigation vs Trickery. Success: Know location of concealed objects on creature</p>
+      <p><strong>Secret Compartments:</strong> Investigation vs discovery DC. Success: Discover compartments</p>
+      <p><strong>Discern Mechanism:</strong> Investigation check. Success: Learn how mechanism works and methods to activate/disable</p>
+    `,
+  },
+  {
+    id: "extend-jump",
+    title: "Extend Jump",
+    subtitle: "Acrobatics",
+    category: "skill",
+    cost: { ap: 1 },
+    content: `
+      <span class="skill-check">SKILL</span>
+      <p><strong>Check:</strong> Acrobatics DC 10</p>
+      <p><strong>Failure:</strong> Jump Distance +1</p>
+      <p><strong>Success:</strong> Jump Distance +2</p>
+      <p><strong>Success (each 5):</strong> +1 Jump Distance</p>
+    `,
+  },
+  {
+    id: "mounted-defense",
+    title: "Mounted Defense",
+    subtitle: "Animal Handling",
+    category: "skill",
+    cost: { ap: 1 },
+    content: `
+      <span class="skill-check">SKILL</span>
+      <p>Maneuver a mount you're riding to avoid danger.</p>
+      <p><strong>Check:</strong> Animal DC 10</p>
+      <p><strong>Success:</strong> Mount's PD +2 until start of your next turn</p>
+      <p><strong>Success (5):</strong> +2 PD</p>
+      <p><strong>Success (10):</strong> +4 PD</p>
+    `,
+  },
+  {
+    id: "pass-through",
+    title: "Pass Through",
+    subtitle: "Martial",
+    category: "skill",
+    cost: { ap: 1 },
+    content: `
+      <span class="skill-check">SKILL</span>
+      <p>Move through Space occupied by hostile creature within 1 size of you.</p>
+      <p><strong>Check:</strong> Martial vs Martial (contested)</p>
+      <p><strong>Success:</strong> Move through creature's Space as Difficult Terrain (Slowed while moving through)</p>
+      <p><strong>Success (5):</strong> Move through without Difficult Terrain</p>
     `,
   },
 ];

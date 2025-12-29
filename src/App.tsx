@@ -8,11 +8,13 @@ const App: React.FC = () => {
   const [cards, setCards] = useState<CharacterCard[]>(characterCards);
   const [categoryState, setCategoryState] = useState<CategoryState>({
     utility: true,
+    weapon: true,
     passive: true,
     skill: true,
     condition: true,
     reaction: true,
     maneuver: true,
+    spell: true,
   });
 
   const toggleCategory = (category: CardCategory) => {

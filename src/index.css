@@ -152,6 +152,22 @@ body {
     background: #0056a3;
 }
 
+.btn[data-category="weapon"] {
+    background: #8B4513;
+}
+
+.btn[data-category="weapon"]:hover {
+    background: #6B3410;
+}
+
+.btn[data-category="spell"] {
+    background: #9b59b6;
+}
+
+.btn[data-category="spell"]:hover {
+    background: #8e44ad;
+}
+
 .card-grid {
     display: grid;
     grid-template-columns: repeat(3, 2.484in);
@@ -299,6 +315,7 @@ body {
 .cost-badge,
 .action-point-cost,
 .stamina-point-cost,
+.magic-point-cost,
 .passive-feature,
 .skill-check,
 .reaction-trigger,
@@ -362,7 +379,9 @@ body {
 .skill-card,
 .condition-card,
 .reaction-card,
-.utility-card {
+.utility-card,
+.weapon-card,
+.spell-card {
     border: 3px solid;
 }
 
@@ -388,6 +407,14 @@ body {
 
 .utility-card {
     border-color: #007acc;
+}
+
+.weapon-card {
+    border-color: #8B4513;
+}
+
+.spell-card {
+    border-color: #9b59b6;
 }
 
 .card-footer {
@@ -450,6 +477,12 @@ body {
 
 .stamina-point-cost {
     background: #003d7a;
+    margin: 2px;
+    padding: 3px;
+}
+
+.magic-point-cost {
+    background: #7b2d9e;
     margin: 2px;
     padding: 3px;
 }
