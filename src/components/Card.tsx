@@ -22,13 +22,13 @@ const Card: React.FC<CardProps> = ({ card, onToggle, marginClasses = [] }) => {
     if (!Array.isArray(card.cost)) {
       return null;
     }
-  
+
     const costArray = card.cost;
     const elements: JSX.Element[] = [];
-  
+
     costArray.forEach((costItem, costIndex) => {
         const itemElements: JSX.Element[] = [];
-        
+
         if (costItem.ap) {
           itemElements.push(
             <span key={`${costIndex}-ap`} className="action-point-cost">
@@ -36,7 +36,7 @@ const Card: React.FC<CardProps> = ({ card, onToggle, marginClasses = [] }) => {
             </span>,
           );
         }
-        
+
         if (costItem.sp) {
           if (itemElements.length > 0) {
             itemElements.push(
@@ -51,7 +51,7 @@ const Card: React.FC<CardProps> = ({ card, onToggle, marginClasses = [] }) => {
             </span>,
           );
         }
-        
+
         if (costItem.mp) {
           if (itemElements.length > 0) {
             itemElements.push(
@@ -66,9 +66,9 @@ const Card: React.FC<CardProps> = ({ card, onToggle, marginClasses = [] }) => {
             </span>,
           );
         }
-        
+
       elements.push(...itemElements);
-      
+
       // Add separator between cost items (use '/')
       if (costIndex < costArray.length - 1) {
         elements.push(
@@ -78,7 +78,7 @@ const Card: React.FC<CardProps> = ({ card, onToggle, marginClasses = [] }) => {
         );
       }
     });
-    
+
     return elements;
   };
 
@@ -141,6 +141,7 @@ const Card: React.FC<CardProps> = ({ card, onToggle, marginClasses = [] }) => {
       </div>
       <div className="card-content">
         {/* eslint-disable-next-line react/no-danger */}
+        {/** biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation> */}
         <div dangerouslySetInnerHTML={{ __html: card.content }} />
       </div>
     </div>
