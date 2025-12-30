@@ -228,7 +228,7 @@ export const utilityCards: CharacterCard[] = [
     category: "utility",
     isTracking: true,
     content: `
-      <div class="resource-tracking-header">Stamina (2)<span class="inline-stamina-icon">🏃</span></div>
+      <div class="resource-tracking-header">Stamina (2)<span class="inline-stamina-icon">🏃🏃</span></div>
       <div class="resource-tracking-header">Grit (4)</div>
       <div class="resource-tracking-icons">💫💫💫💫</div>
       <div class="resource-tracking-header">Temp HP</div>

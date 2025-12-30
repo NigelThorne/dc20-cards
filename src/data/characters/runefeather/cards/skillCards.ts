@@ -9,14 +9,10 @@ export const skillCards: CharacterCard[] = [
     cost: [{ ap: 1 }],
     content: `
       <span class="skill-check">SKILL</span>
-      <p>
-        <strong>Check:</strong> Knowledge check (type depends on
-        creature)
-      </p>
-      <p>
-        <strong>Success:</strong> Learn lore/creature statistics
-        depending on success level
-      </p>
+      <p>Recall or discern info about creature you can see or hear.</p>
+      <p><strong>Check:</strong> Knowledge DC 10 (type depends on creature)</p>
+      <p><strong>Success:</strong> Learn a piece of lore about creature</p>
+      <p><strong>Success ↻+5:</strong> Learn 1 creature statistic (PD, AD, Attacks, Abilities, Resistances, Vulnerabilities, Immunities)</p>
     `,
   },
   {
@@ -27,13 +23,11 @@ export const skillCards: CharacterCard[] = [
     cost: [{ ap: 1 }],
     content: `
       <span class="skill-check">SKILL</span>
-      <p><strong>Check:</strong> <span class="stat-reference">Animal</span> check vs <span class="stat-reference">Charisma</span> save</p>
-      <p>
-        <strong>Success:</strong> Animal is calmed for 1 min
-        (repeated save) or until you harm it
-      </p>
-      <p><strong>Success +5:</strong> Impaired</p>
-      <p><strong>Success +10:</strong> Charmed</p>
+      <p>Beguile Beast that can see or hear you.</p>
+      <p><strong>Check:</strong> Animal vs their Charisma save (repeated)</p>
+      <p><strong>Success:</strong> Taunted for 1 min or until you harm it with Attack, Spell, or other effect</p>
+      <p><strong>Success +5:</strong> Intimidated instead</p>
+      <p><strong>Success +10:</strong> Also Charmed</p>
     `,
   },
   {
@@ -45,7 +39,7 @@ export const skillCards: CharacterCard[] = [
     content: `
       <span class="skill-check">SKILL</span>
       <p>
-        <strong>Check:</strong> Insight vs Trickery/Influence
+        <strong>Check:</strong> Insight vs their Trickery/Influence
         check
       </p>
       <p>
@@ -70,7 +64,7 @@ export const skillCards: CharacterCard[] = [
     cost: [{ ap: 1 }],
     content: `
       <span class="skill-check">SKILL</span>
-      <p><strong>Check:</strong> Trickery vs Passive Awareness</p>
+      <p><strong>Check:</strong> Trickery vs their Passive Awareness</p>
       <p><strong>Effect:</strong> Attempt to hide an object</p>
     `,
   },
@@ -82,7 +76,7 @@ export const skillCards: CharacterCard[] = [
     cost: [{ ap: 1 }],
     content: `
       <span class="skill-check">SKILL</span>
-      <p><strong>Check:</strong> Trickery vs target's Insight</p>
+      <p><strong>Check:</strong> Trickery vs their Insight</p>
       <p>
         <strong>Success:</strong> ADV and +1 to hit against
         target before next turn
@@ -104,7 +98,7 @@ export const skillCards: CharacterCard[] = [
     cost: [{ ap: 1 }],
     content: `
       <span class="skill-check">SKILL</span>
-      <p><strong>Check:</strong> Intimidate vs Charisma</p>
+      <p><strong>Check:</strong> Intimidate vs their Charisma</p>
       <p><strong>Success:</strong> Target is Intimidated</p>
     `,
   },
@@ -116,11 +110,10 @@ export const skillCards: CharacterCard[] = [
     cost: [{ ap: 1 }],
     content: `
       <span class="skill-check">SKILL</span>
-      <p>
-        <strong>Effect:</strong> Medicine check to stop bleeding
-        or stabilize target
-      </p>
-      <p><strong>Success +5:</strong> 1 temp HP</p>
+      <p>Touch creature and tend to wounds.</p>
+      <p><strong>Check:</strong> Medicine DC 10</p>
+      <p><strong>Success:</strong> End 1 stack of Bleeding</p>
+      <p><strong>Success ↻5:</strong> End +1 stack of Bleeding</p>
     `,
   },
   {
@@ -132,7 +125,7 @@ export const skillCards: CharacterCard[] = [
     content: `
       <span class="skill-check">SKILL</span>
       <p>Locate 1+ Hidden creatures and concealed objects within Line of Sight.</p>
-      <p><strong>Hidden Creatures:</strong> Awareness vs Stealth. Success: Know location until end of turn</p>
+      <p><strong>Hidden Creatures:</strong> Awareness vs their Stealth. Success: Know location until end of turn</p>
       <p><strong>Hidden Objects:</strong> Awareness vs discovery DC. Success: Discover location</p>
     `,
   },
@@ -145,7 +138,7 @@ export const skillCards: CharacterCard[] = [
     content: `
       <span class="skill-check">SKILL</span>
       <p>Uncover concealed object, secret compartment, or mechanism function within 1 Space.</p>
-      <p><strong>Concealed Objects:</strong> Investigation vs Trickery. Success: Know location of concealed objects on creature</p>
+      <p><strong>Concealed Objects:</strong> Investigation vs their Trickery. Success: Know location of concealed objects on creature</p>
       <p><strong>Secret Compartments:</strong> Investigation vs discovery DC. Success: Discover compartments</p>
       <p><strong>Discern Mechanism:</strong> Investigation check. Success: Learn how mechanism works and methods to activate/disable</p>
     `,
@@ -188,7 +181,7 @@ export const skillCards: CharacterCard[] = [
     content: `
       <span class="skill-check">SKILL</span>
       <p>Move through Space occupied by hostile creature within 1 size of you.</p>
-      <p><strong>Check:</strong> Martial vs Martial (contested)</p>
+      <p><strong>Check:</strong> Martial vs their Martial (contested)</p>
       <p><strong>Success:</strong> Move through creature's Space as Difficult Terrain (Slowed while moving through)</p>
       <p><strong>Success (5):</strong> Move through without Difficult Terrain</p>
     `,

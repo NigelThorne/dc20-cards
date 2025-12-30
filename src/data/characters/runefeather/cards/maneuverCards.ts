@@ -22,7 +22,7 @@ export const maneuverCards: CharacterCard[] = [
     title: "Heroic Extend Jump",
     subtitle: "Maneuver",
     category: "maneuver",
-    cost: [{ ap: 1, sp: 1 }],
+    cost: [{ ap: 1 },{ sp: 1 }],
     content: `
       <p><strong>Base Action:</strong> Acrobatics Check (DC 10)</p>
       <p>• Success: Jump Distance +2 (+1 per 5 over DC)</p>
