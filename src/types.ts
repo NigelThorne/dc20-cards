@@ -60,6 +60,7 @@ export interface CharacterStats {
   maxHealth: number;
   maxStamina: number;
   maxGrit: number;
+  maxMana: number;
   maxRest: number;
   physicalAbilities: AbilityScore[];
   mentalAbilities: AbilityScore[];

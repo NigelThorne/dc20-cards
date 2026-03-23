@@ -23,6 +23,7 @@ export const characterStats: CharacterStats = {
   maxHealth: 8,
   maxStamina: 2,
   maxGrit: 4,
+  maxMana: 0,
   maxRest: 8,
   physicalAbilities: [
     {
