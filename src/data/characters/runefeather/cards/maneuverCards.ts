@@ -18,18 +18,20 @@ export const maneuverCards: CharacterCard[] = [
     `,
   },
   {
-    id: "heroic-extend-jump",
-    title: "Heroic Extend Jump",
-    subtitle: "Maneuver",
+    id: "savage-strike",
+    title: "Savage Strike",
+    subtitle: "Attack Maneuver",
     category: "maneuver",
-    cost: [{ ap: 1 },{ sp: 1 }],
+    cost: [{ ap: 1 }, { sp: 1 }],
     content: `
-      <p><strong>Base Action:</strong> Acrobatics Check (DC 10)</p>
-      <p>• Success: Jump Distance +2 (+1 per 5 over DC)</p>
-      <p>• Failure: Jump Distance +1</p>
-      <p><span class="stamina-point-cost">1SP</span> <strong>Instant Jump:</strong> Standing Jump not halved</p>
-      <p><span class="stamina-point-cost">1SP ↻</span> <strong>Increased Jump:</strong> Jump Distance +2</p>
-      <p><span class="stamina-point-cost">1SP ↻</span> <strong>Heroic Landing:</strong> Reduce fall damage by 2</p>
+      <p style="margin: 2px 0;"><strong>Range:</strong> Weapon or Unarmed Strike</p>
+      <hr>
+      <p style="margin: 2px 0;">Martial Attack vs PD + target makes Physical Save vs your Save DC.</p>
+      <p style="margin: 2px 0;"><strong>Hit:</strong> Weapon damage.</p>
+      <p style="margin: 2px 0;"><strong>Save Fail:</strong> Physical Vulnerability (1) for 1 Round.</p>
+      <hr>
+      <p style="margin: 2px 0;"><span class="stamina-point-cost">2SP ↻</span> <strong>Improved Vulnerability:</strong> Vulnerability +1</p>
+      <p style="margin: 2px 0;"><span class="stamina-point-cost">2SP</span> <strong>Break Resistance:</strong> Target loses Physical Resistance for duration</p>
     `,
   },
 ];

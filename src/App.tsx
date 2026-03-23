@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Card from "./components/Card";
 import Controls from "./components/Controls";
 import type { CharacterCard, CardCategory, CategoryState } from "./types";
-import { runefeather, alera, type CharacterName } from "./data";
+import { runefeather, alera, jacqui, type CharacterName } from "./data";
 
 const App: React.FC = () => {
   const [selectedCharacter, setSelectedCharacter] = useState<CharacterName>("runefeather");
@@ -86,7 +86,10 @@ const App: React.FC = () => {
 
   useEffect(() => {
     // Load cards for selected character
-    const characterData = selectedCharacter === "runefeather" ? runefeather : alera;
+    const characterData = 
+      selectedCharacter === "runefeather" ? runefeather :
+      selectedCharacter === "alera" ? alera :
+      jacqui;
     setCards(characterData.characterCards);
     
     // Reset all categories to visible when switching characters
@@ -126,6 +129,7 @@ const App: React.FC = () => {
         >
           <option value="runefeather">Runefeather</option>
           <option value="alera">Alera</option>
+          <option value="jacqui">Jacqui</option>
         </select>
       </div>
 

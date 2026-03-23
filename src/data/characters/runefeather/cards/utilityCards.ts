@@ -4,7 +4,7 @@ export const utilityCards: CharacterCard[] = [
   {
     id: "character-summary",
     title: "Runefeather",
-    subtitle: "Level 1 Rogue • Beastborn",
+    subtitle: "Level 2 Rogue • Beastborn (Bird)",
     category: "utility",
     tags: ["cover-card"],
     content: `
@@ -15,30 +15,28 @@ export const utilityCards: CharacterCard[] = [
           <span class="stat-label">Jump:</span> 3
         </div>
         <div>
-          <span class="stat-label">Fly:</span> full speed |
-          <span class="stat-label">Fly up:</span> 1/2 speed
+          <span class="stat-label">Fly:</span> 5 (full speed) |
+          <span class="stat-label">Flyby:</span> no OA
         </div>
       </div>
-      <div style="text-align: center; margin-top: 8px;" class="ability-section-header">Defenses</div>
+      <div style="text-align: center; margin-top: 2px;" class="ability-section-header">Defenses</div>
       <div style="display: flex; gap: 6px;">
         <div style="flex: 1;">
           <div class="character-stats-box defense-stats area-defense-box" style="text-align: center;">
-            <div class="ability-section-header" style="margin-bottom: 4px;">Precision</div>
-            <div style="font-size: 1.8em; font-weight: bold; margin: 4px 0;">14</div>
-            <div style="font-size: 0.85em;">H: 19</div>
-            <div style="font-size: 0.85em;">B: 24</div>
+            <div class="ability-section-header" style="margin-bottom: 2px;">Precision</div>
+            <div style="font-size: 1.5em; font-weight: bold; margin: 2px 0;">15</div>
+            <div style="font-size: 0.85em;">H: 20  B: 25</div>
           </div>
         </div>
         <div style="flex: 1;">
           <div class="character-stats-box defense-stats precision-defense-box" style="text-align: center;">
-            <div class="ability-section-header" style="margin-bottom: 4px;">Area</div>
-            <div style="font-size: 1.8em; font-weight: bold; margin: 4px 0;">10</div>
-            <div style="font-size: 0.85em;">H: 15</div>
-            <div style="font-size: 0.85em;">B: 20</div>
+            <div class="ability-section-header" style="margin-bottom: 2px;">Area</div>
+            <div style="font-size: 1.5em; font-weight: bold; margin: 2px 0;">11</div>
+            <div style="font-size: 0.85em;">H: 16  B: 21</div>
           </div>
         </div>
       </div>
-      <div class="character-stats-box character-combat-stats-box" style="margin-top: 6px;">
+      <div class="character-stats-box character-combat-stats-box" style="margin-top: 2px;">
         <div>
           <span class="stat-label">Attack/Check:</span> +4 |
           <span class="stat-label">Save DC:</span> 14
@@ -48,9 +46,11 @@ export const utilityCards: CharacterCard[] = [
           <span class="stat-label">Death Threshold:</span> 4
         </div>
       </div>
-      <div class="character-stats-box character-traits-box" style="margin-top:11px;">
-        <div><strong>🌙 Prowler:</strong> ADV on Stealth Checks while in Darkness</div>
+      <div class="character-stats-box character-traits-box" style="margin-top: 4px;">
         <div><strong>👁️ Darkvision:</strong> 10 Spaces</div>
+        <div><strong>📏 Small-Sized:</strong> Size is Small</div>
+        <div><strong>🦅 Keen Sense (sight):</strong> ADV Awareness (sight)</div>
+        <div><strong>💪 Tough:</strong> +1 max HP</div>
       </div>
     `,
   },
@@ -60,104 +60,100 @@ export const utilityCards: CharacterCard[] = [
     subtitle: "Stats & Skills",
     category: "utility",
     content: `
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px 6px;">
+        <div class="ability-section-header" style="text-align: center;">Physical</div>
+        <div class="ability-section-header" style="text-align: center;">Mental</div>
 
-
-      <div style="display: flex; gap: 6px;">
-        <div style="flex: 1;">
-          <div class="ability-section-header" style="text-align: center;">Physical</div>
-
-          <div class="character-stats-box might-ability-box" style="margin-bottom: 8px; min-height: 100px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding: 4px 0;">
-              <span style="font-size: 1.2em; font-weight: bold;">Might</span>
-              <span style="font-size: 1.2em; font-weight: bold;">-2</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 2px 0; font-size: 0.8em; color: #666;">
-              <span>save</span>
-              <span>0</span>
-            </div>
-            <div style="font-size: 0.9em; margin: 6px 0;">
-              <div>• Athletics: -2</div>
-              <div>• Intimidation: -2</div>
-            </div>
+        <div class="character-stats-box might-ability-box">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding: 2px 0;">
+            <span style="font-size: 1.2em; font-weight: bold;">Might</span>
+            <span style="font-size: 1.2em; font-weight: bold;">-2</span>
           </div>
-
-          <div class="character-stats-box agility-ability-box" style="min-height: 100px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding: 4px 0;">
-              <span style="font-size: 1.2em; font-weight: bold;">Agility</span>
-              <span style="font-size: 1.2em; font-weight: bold;">+3</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 2px 0; font-size: 0.8em; color: #666;">
-              <span>save</span>
-              <span>5</span>
-            </div>
-            <div style="font-size: 0.9em; margin: 6px 0;">
-              <div>• Acrobatics: +3</div>
-              <div>• Trickery: +7</div>
-              <div>• Stealth: +5</div>
-            </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 2px 0; font-size: 0.8em; color: #666;">
+            <span>save</span>
+            <span>0</span>
+          </div>
+          <div style="font-size: 0.9em; margin: 2px 0;">
+            <div>• Athletics: -2</div>
+            <div>• Intimidation: -2</div>
+          </div>
+        </div>
+        <div class="character-stats-box charisma-ability-box">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding: 2px 0;">
+            <span style="font-size: 1.2em; font-weight: bold;">Charisma</span>
+            <span style="font-size: 1.2em; font-weight: bold;">+2</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 2px 0; font-size: 0.8em; color: #666;">
+            <span>save</span>
+            <span>4</span>
+          </div>
+          <div style="font-size: 0.9em; margin: 2px 0;">
+            <div>• Animal: +4</div>
+            <div>• Influence: +4</div>
+            <div>• Insight: +2</div>
           </div>
         </div>
 
-        <div style="flex: 1;">
-          <div class="ability-section-header" style="text-align: center;">Mental</div>
-
-          <div class="character-stats-box charisma-ability-box" style="margin-bottom: 8px; min-height: 100px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding: 4px 0;">
-              <span style="font-size: 1.2em; font-weight: bold;">Charisma</span>
-              <span style="font-size: 1.2em; font-weight: bold;">+2</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 2px 0; font-size: 0.8em; color: #666;">
-              <span>save</span>
-              <span>4</span>
-            </div>
-            <div style="font-size: 0.9em; margin: 6px 0;">
-              <div>• Animal: +4</div>
-              <div>• Influence: +4</div>
-              <div>• Insight: +2</div>
-            </div>
+        <div class="character-stats-box agility-ability-box">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding: 2px 0;">
+            <span style="font-size: 1.2em; font-weight: bold;">Agility</span>
+            <span style="font-size: 1.2em; font-weight: bold;">+3</span>
           </div>
-
-          <div class="character-stats-box intelligence-ability-box" style="min-height: 100px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding: 4px 0;">
-              <span style="font-size: 1.2em; font-weight: bold;">Intelligence</span>
-              <span style="font-size: 1.2em; font-weight: bold;">+1</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 2px 0; font-size: 0.8em; color: #666;">
-              <span>save</span>
-              <span>3</span>
-            </div>
-            <div style="font-size: 0.9em; margin: 6px 0;">
-              <div>• Investigation: +1</div>
-              <div>• Medicine: +1</div>
-              <div>• Survival: +3</div>
-            </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 2px 0; font-size: 0.8em; color: #666;">
+            <span>save</span>
+            <span>5</span>
+          </div>
+          <div style="font-size: 0.9em; margin: 2px 0;">
+            <div>• Acrobatics: +3</div>
+            <div>• Trickery: +7</div>
+            <div>• Stealth: +5</div>
+          </div>
+        </div>
+        <div class="character-stats-box intelligence-ability-box">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding: 2px 0;">
+            <span style="font-size: 1.2em; font-weight: bold;">Intelligence</span>
+            <span style="font-size: 1.2em; font-weight: bold;">+1</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 2px 0; font-size: 0.8em; color: #666;">
+            <span>save</span>
+            <span>3</span>
+          </div>
+          <div style="font-size: 0.9em; margin: 2px 0;">
+            <div>• Investigation: +1</div>
+            <div>• Medicine: +1</div>
+            <div>• Survival: +3</div>
           </div>
         </div>
       </div>
 
-      <div class="character-stats-box prime-awareness-box" style="margin-top: 8px">
-        <strong>Prime:</strong> 3 | <strong>Awareness:</strong> 5
+      <div class="character-stats-box prime-awareness-box" style="margin-top: 4px">
+        <strong>Prime:</strong> 3 | <strong>Awareness:</strong> 5 <em>(ADV on sight)</em>
       </div>
     `,
   },
   {
     id: "beastborn-bird",
     title: "Beastborn: Bird",
-    subtitle: "Racial Features",
+    subtitle: "Racial Features (10 pts)",
     category: "utility",
     content: `
-      <p>(1) <strong>Darkvision:</strong> 10 Spaces</p>
-      <p>(1) <strong>Prowler:</strong> ADV Stealth in Darkness</p>
-      <p>(2) <strong>Glide Speed:</strong> Wings glide and slow descent</p>
-      <p>• No Controlled Fall damage</p>
-      <p>• Glide horizontally</p>
-      <p>• <s>End turn midair: Fall 4 Spaces</s></p>
-      <p>(2) <strong>Limited Flight:</strong> (requires Glide Speed)</p>
-      <p>• Ascend: 2 movement → 1 Space up</p>
-      <p>• Hover: Maintain altitude (replaces fall)</p>
+    <div style="line-height: 1.1;">
+      <p style="margin: 2px 0;">(-1) <strong>Small-Sized:</strong> Size is Small</p>
+      <p style="margin: 2px 0;">(1) <strong>Darkvision:</strong> 10 Spaces</p>
+      <p style="margin: 2px 0;">(1) <strong>Keen Sense (sight):</strong> ADV on Awareness Checks using sight</p>
+      <p style="margin: 2px 0;">(1) <strong>Flyby:</strong> No Opportunity Attacks when flying out of reach</p>
+      <p style="margin: 2px 0;">(1) <strong>Tough:</strong> +1 max HP</p>
+      <p style="margin: 2px 0;">(2) <strong>Glide Speed:</strong> Wings glide and slow descent</p>
+      <p style="margin: 2px 0; margin-left: 12px;">• No Controlled Fall damage</p>
+      <p style="margin: 2px 0; margin-left: 12px;">• Glide horizontally at full speed</p>
+      <p style="margin: 2px 0;">(2) <strong>Limited Flight:</strong> (requires Glide Speed)</p>
+      <p style="margin: 2px 0; margin-left: 12px;">• Ascend: 2 movement → 1 Space up</p>
+      <p style="margin: 2px 0; margin-left: 12px;">• Hover: Maintain altitude</p>
+      <p style="margin: 2px 0;">(2) <strong>Full Flight:</strong> Fly Speed = Ground Speed</p>
+      <p style="margin: 2px 0; font-size: 0.8em; color: #888;"><em>5 base + 4 (Ancestry Increase talent @ Lv2) = 9 pts to spend</em></p>
+    </div>
     `,
   },
-
   {
     id: "trades-languages",
     title: "Trades & Languages",
@@ -229,14 +225,14 @@ export const utilityCards: CharacterCard[] = [
     isTracking: true,
     content: `
       <div class="resource-tracking-header">Stamina (2)<span class="inline-stamina-icon">🏃🏃</span></div>
-      <div class="resource-tracking-header">Grit (4)</div>
-      <div class="resource-tracking-icons">💫💫💫💫</div>
+      <div class="resource-tracking-header">Grit (4)<span class="inline-stamina-icon">💫💫💫💫</div>
+      <div class="resource-tracking-header">Mana (3)<span class="inline-stamina-icon">🔮🔮🔮</span></div>
       <div class="resource-tracking-header">Temp HP</div>
-      <div class="resource-tracking-icons">🤍🤍🤍🤍🤍🤍🤍🤍🤍</div>
-      <div class="resource-tracking-header">Health (6)</div>
-      <div class="resource-tracking-icons">❤️❤️❤️❤️❤️❤️</div>
-      <div class="resource-tracking-header">Rest (6)</div>
-      <div class="resource-tracking-icons">😴😴😴😴😴😴</div>
+      <div class="resource-tracking-icons">🤍🤍🤍🤍🤍🤍🤍</div>
+      <div class="resource-tracking-header">Health (8)</div>
+      <div class="resource-tracking-icons">❤️❤️❤️❤️❤️❤️❤️❤️</div>
+      <div class="resource-tracking-header">Rest (8)</div><!-- same as max HP -->
+      <div class="resource-tracking-icons">😴😴😴😴😴😴😴😴</div>
       <div class="resource-tracking-header">Exhaustion <em>(Death at 6)</em></div>
       <div class="resource-tracking-icons">💀💀💀💀💀☠️</div>
       <div class="rules-reminder">Exhaustion: -X to checks, saves, speed, save DC</div>

@@ -1,30 +1,21 @@
-import * as runefeather from './characters/runefeather';
 import * as alera from './characters/alera';
+import * as jacqui from './characters/jacqui';
+import * as runefeather from './characters/runefeather';
 
 // Export individual characters
-export { runefeather, alera };
+export { alera, jacqui, runefeather };
 
 // Export default character (Runefeather)
 export const characterStats = runefeather.characterStats;
 export const characterCards = runefeather.characterCards;
 
-// Export individual card arrays from default character for backward compatibility
-export {
-  utilityCards,
-  weaponCards,
-  passiveCards,
-  maneuverCards,
-  skillCards,
-  reactionCards,
-  conditionCards,
-} from './characters/runefeather';
-
 // Export all characters as an array for iteration
 export const characters = {
   runefeather,
   alera,
+  jacqui,
 };
 
 // Export character names for selection
-export const characterNames = ['runefeather', 'alera'] as const;
+export const characterNames = ['runefeather', 'alera', 'jacqui'] as const;
 export type CharacterName = typeof characterNames[number];

@@ -1,14 +1,12 @@
 import { characterStats } from './characterStats';
-import { utilityCards } from './cards/utilityCards';
 import { spellCards } from './cards/spellCards';
+import { maneuverCards } from './cards/maneuverCards';
 import type { CharacterCard } from '../../../types';
-import { skillCards } from './cards/skillCards';
 
 // Combine all cards into a single array
 export const characterCards: CharacterCard[] = [
-  ...utilityCards,
   ...spellCards,
-  ...skillCards
+  ...maneuverCards,
 ];
 
 // Export character stats
@@ -16,6 +14,6 @@ export { characterStats };
 
 // Export individual card arrays for easy access
 export {
-  utilityCards,
   spellCards,
+  maneuverCards,
 };

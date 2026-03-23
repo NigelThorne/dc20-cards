@@ -2,18 +2,6 @@ import type { CharacterCard } from '../../../../types';
 
 export const skillCards: CharacterCard[] = [
   {
-    id: "i-know-a-guy",
-    title: "I Know a Guy",
-    subtitle: "Homebrew — Story Ability",
-    category: "skill",
-    content: `
-      <p>Introduce a contact from your past to gain a resource or piece of information you need right now.</p>
-      <hr>
-      <p><strong>Favours flow both ways</strong> — you collect debts like a magpie collects gems. You owe people as often as they owe you.</p>
-      <p style="font-style: italic; opacity: 0.7;">🐦‍⬛ "Actually... I know a guy."</p>
-    `,
-  },
-  {
     id: "analyze-creature",
     title: "Analyze Creature",
     subtitle: "Knowledge Check",
@@ -25,6 +13,7 @@ export const skillCards: CharacterCard[] = [
       <p><strong>Check:</strong> Knowledge DC 10 (type depends on creature)</p>
       <p><strong>Success:</strong> Learn a piece of lore about creature</p>
       <p><strong>Success ↻+5:</strong> Learn 1 creature statistic (PD, AD, Attacks, Abilities, Resistances, Vulnerabilities, Immunities)</p>
+      <div style="padding: 4px;margin-top:11px;border: 1px solid blue; background-color:#ddaaff"><h3>Alirea Special:</h3><p><strong>ADV</strong> on wind elementals</p></div>
     `,
   },
   {
@@ -92,13 +81,6 @@ export const skillCards: CharacterCard[] = [
       <p>
         <strong>Success:</strong> ADV and +1 to hit against
         target before next turn
-      </p>
-      <p>
-        <em
-          >+3 move from Cunning Action +<span class="stamina-point-cost"
-            >SP</span
-          ></em
-        >
       </p>
     `,
   },
